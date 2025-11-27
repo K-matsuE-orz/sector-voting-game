@@ -18,29 +18,45 @@ function App() {
 
     useEffect(() => {
         // Fetch stock data from public/stock_data.json
-        fetch('/stock_data.json')
-            .then(res => res.json())
-            .then(json => {
-                if (json.sectors) {
-                    setData(prev => {
-                        const newData = { ...prev };
-                        Object.keys(json.sectors).forEach(key => {
-                            if (newData[key]) {
-                                newData[key].change = json.sectors[key].change_percent;
-                            }
-                        });
-                        return newData;
-                    });
+        // Try with base path first (production), then fallback to relative (local)
+        const fetchData = async () => {
+            try {
+                const res = await fetch('/sector-voting-game/stock_data.json');
+                if (!res.ok) throw new Error('Not found');
+                const json = await res.json();
+                updateData(json);
+            } catch (err) {
+                try {
+                    const res = await fetch('/stock_data.json');
+                    const json = await res.json();
+                    updateData(json);
+                } catch (e) {
+                    console.error("Failed to load stock data", e);
                 }
-            })
-            .catch(err => console.error("Failed to load stock data", err));
+            }
+        };
+
+        const updateData = (json) => {
+            if (json.sectors) {
+                setData(prev => {
+                    const newData = { ...prev };
+                    Object.keys(json.sectors).forEach(key => {
+                        if (newData[key]) {
+                            newData[key].change = json.sectors[key].change_percent;
+                        }
+                    });
+                    return newData;
+                });
+            }
+        };
+
+        fetchData();
     }, []);
 
     const handleVote = (sectorKey) => {
         if (hasVoted) return;
         setSelectedSector(sectorKey);
         setHasVoted(true);
-        // Here you would send the vote to Firebase
         console.log(`Voted for ${sectorKey}`);
 
         // Optimistic update for demo
@@ -53,7 +69,7 @@ function App() {
     const chartData = Object.keys(data).map(key => ({
         name: data[key].name,
         Growth: data[key].change,
-        Votes: data[key].votes // This would be normalized or separate in a real app
+        Votes: data[key].votes
     }));
 
     return (
@@ -76,13 +92,16 @@ function App() {
                             className="p-6 rounded-xl bg-gray-800 hover:bg-gray-700 border border-gray-700 transition-all hover:scale-105 group"
                         >
                             <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-400">{info.name}</h3>
-                            <div className="text-4xl mb-4">
+                            <div className="text-4xl mb-2">
                                 {key === 'AI_Robot' && '🤖'}
                                 {key === 'Quantum' && '⚛️'}
                                 {key === 'Semi' && '📱'}
                                 {key === 'Bio' && '💊'}
                                 {key === 'Fusion' && '☀️'}
                                 {key === 'Space' && '🚀'}
+                            </div>
+                            <div className={`text-xl font-bold mb-4 ${info.change > 0 ? 'text-red-400' : info.change < 0 ? 'text-green-400' : 'text-gray-400'}`}>
+                                {info.change > 0 ? '+' : ''}{info.change}%
                             </div>
                             <p className="text-gray-400 text-sm">クリックして投票</p>
                         </button>
@@ -108,12 +127,11 @@ function App() {
                                     />
                                     <Legend />
                                     <Bar dataKey="Growth" fill="#8884d8" name="市場パフォーマンス (平均騰落率)" />
-                                    {/* <Bar dataKey="Votes" fill="#82ca9d" name="投票数" /> */}
                                 </BarChart>
                             </ResponsiveContainer>
                         </div>
                         <p className="text-sm text-gray-500 mt-4 text-right">
-                            ※市場パフォーマンスは各分野の代表5銘柄の直近騰落率平均です。<br />
+                            ※市場パフォーマンスは各分野の代表10銘柄の直近騰落率平均です。<br />
                             データ更新日: {new Date().toLocaleDateString()}
                         </p>
                     </div>
