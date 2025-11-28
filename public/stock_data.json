@@ -1,33 +1,32 @@
 {
-  "last_updated": "2025-11-28 04:33:37",
   "sectors": {
     "AI_Robot": {
-      "change_percent": 0.03,
+      "change_percent": 0.29,
       "tickers": [
         {
           "ticker": "9984.T",
-          "change": -0.5,
-          "price": 16755.0
+          "change": -0.39,
+          "price": 16775.0
         },
         {
           "ticker": "6861.T",
-          "change": -0.83,
-          "price": 52890.0
+          "change": -0.75,
+          "price": 52930.0
         },
         {
           "ticker": "6954.T",
-          "change": 0.74,
-          "price": 5006.0
+          "change": 0.91,
+          "price": 5014.0
         },
         {
           "ticker": "6273.T",
-          "change": 0.63,
-          "price": 54070.0
+          "change": 1.32,
+          "price": 54440.0
         },
         {
           "ticker": "6645.T",
-          "change": 1.06,
-          "price": 3996.0
+          "change": 1.21,
+          "price": 4002.0
         },
         {
           "ticker": "3993.T",
@@ -36,138 +35,138 @@
         },
         {
           "ticker": "4180.T",
-          "change": -4.34,
-          "price": 1081.0
+          "change": -5.31,
+          "price": 1070.0
         },
         {
           "ticker": "247A.T",
-          "change": 2.86,
-          "price": 1440.0
+          "change": 4.43,
+          "price": 1462.0
         },
         {
           "ticker": "4382.T",
-          "change": 0.34,
-          "price": 898.0
+          "change": 0.45,
+          "price": 899.0
         },
         {
           "ticker": "4011.T",
-          "change": 1.22,
-          "price": 2989.0
+          "change": 1.93,
+          "price": 3010.0
         }
       ]
     },
     "Quantum": {
-      "change_percent": 0.31,
+      "change_percent": 0.4,
       "tickers": [
         {
           "ticker": "6702.T",
-          "change": -1.82,
-          "price": 4151.0
+          "change": -1.89,
+          "price": 4148.0
         },
         {
           "ticker": "6701.T",
-          "change": -1.6,
-          "price": 5893.0
+          "change": -1.39,
+          "price": 5906.0
         },
         {
           "ticker": "9432.T",
-          "change": 0.32,
-          "price": 154.9
+          "change": 0.52,
+          "price": 155.2
         },
         {
           "ticker": "6501.T",
-          "change": 0.18,
-          "price": 4967.0
+          "change": 0.44,
+          "price": 4980.0
         },
         {
           "ticker": "6503.T",
-          "change": 0.07,
-          "price": 4230.0
+          "change": 0.64,
+          "price": 4254.0
         },
         {
           "ticker": "3687.T",
-          "change": -0.24,
-          "price": 1643.0
+          "change": -0.49,
+          "price": 1639.0
         },
         {
           "ticker": "6597.T",
-          "change": 2.79,
-          "price": 1844.0
+          "change": 2.01,
+          "price": 1830.0
         },
         {
           "ticker": "6521.T",
-          "change": 2.21,
-          "price": 1572.0
+          "change": 2.08,
+          "price": 1570.0
         },
         {
           "ticker": "7713.T",
-          "change": 0.8,
-          "price": 1515.0
+          "change": 0.86,
+          "price": 1516.0
         },
         {
           "ticker": "2693.T",
-          "change": 0.41,
-          "price": 247.0
+          "change": 1.22,
+          "price": 249.0
         }
       ]
     },
     "Semi": {
-      "change_percent": -0.56,
+      "change_percent": -0.21,
       "tickers": [
         {
           "ticker": "8035.T",
-          "change": -1.74,
-          "price": 31620.0
+          "change": -1.46,
+          "price": 31710.0
         },
         {
           "ticker": "6857.T",
-          "change": -0.24,
-          "price": 20360.0
+          "change": 0.47,
+          "price": 20505.0
         },
         {
           "ticker": "4063.T",
-          "change": 0.45,
-          "price": 4665.0
+          "change": 0.8,
+          "price": 4681.0
         },
         {
           "ticker": "6146.T",
-          "change": -0.87,
-          "price": 43380.0
+          "change": -0.62,
+          "price": 43490.0
         },
         {
           "ticker": "6920.T",
-          "change": -0.25,
-          "price": 27780.0
+          "change": 0.16,
+          "price": 27895.0
         },
         {
           "ticker": "6323.T",
-          "change": -0.48,
-          "price": 2092.0
+          "change": -0.59,
+          "price": 2089.5
         },
         {
           "ticker": "6315.T",
-          "change": -1.58,
-          "price": 2120.0
+          "change": -1.16,
+          "price": 2129.0
         },
         {
           "ticker": "4369.T",
-          "change": -0.72,
-          "price": 2769.0
+          "change": -0.14,
+          "price": 2785.0
         },
         {
           "ticker": "6871.T",
-          "change": -0.15,
-          "price": 6470.0
+          "change": 0.77,
+          "price": 6530.0
         },
         {
           "ticker": "6266.T",
-          "change": -0.05,
-          "price": 2159.0
+          "change": -0.32,
+          "price": 2153.0
         }
       ]
     },
     "Bio": {
-      "change_percent": 1.29,
+      "change_percent": 0.98,
       "tickers": [
         {
           "ticker": "4519.T",
@@ -176,138 +175,138 @@
         },
         {
           "ticker": "4568.T",
-          "change": 0.58,
-          "price": 3830.0
+          "change": 0.81,
+          "price": 3839.0
         },
         {
           "ticker": "4502.T",
-          "change": 0.29,
-          "price": 4495.0
+          "change": 0.25,
+          "price": 4493.0
         },
         {
           "ticker": "4578.T",
-          "change": -0.31,
-          "price": 8814.0
+          "change": -0.36,
+          "price": 8809.0
         },
         {
           "ticker": "4503.T",
-          "change": -0.43,
-          "price": 1958.0
+          "change": -0.23,
+          "price": 1962.0
         },
         {
           "ticker": "4587.T",
-          "change": 4.01,
-          "price": 1777.0
+          "change": 3.31,
+          "price": 1765.0
         },
         {
           "ticker": "2160.T",
-          "change": 1.57,
-          "price": 2595.0
+          "change": 0.98,
+          "price": 2580.0
         },
         {
           "ticker": "4552.T",
-          "change": 8.73,
-          "price": 797.0
+          "change": 8.19,
+          "price": 793.0
         },
         {
           "ticker": "4592.T",
-          "change": -1.99,
-          "price": 2222.0
+          "change": -3.31,
+          "price": 2192.0
         },
         {
           "ticker": "4599.T",
-          "change": 1.44,
-          "price": 281.0
+          "change": 1.08,
+          "price": 280.0
         }
       ]
     },
     "Fusion": {
-      "change_percent": 0.93,
+      "change_percent": 1.38,
       "tickers": [
         {
           "ticker": "7013.T",
-          "change": -0.11,
-          "price": 2767.5
+          "change": 0.79,
+          "price": 2792.5
         },
         {
           "ticker": "5802.T",
-          "change": 1.15,
-          "price": 6159.0
+          "change": 1.46,
+          "price": 6178.0
         },
         {
           "ticker": "5803.T",
-          "change": -1.19,
-          "price": 17885.0
+          "change": -0.58,
+          "price": 17995.0
         },
         {
           "ticker": "5801.T",
-          "change": 3.2,
-          "price": 9783.0
+          "change": 4.29,
+          "price": 9887.0
         },
         {
           "ticker": "1963.T",
-          "change": 1.62,
-          "price": 1915.0
+          "change": 1.67,
+          "price": 1916.0
         },
         {
           "ticker": "5310.T",
-          "change": 0.3,
-          "price": 4940.0
+          "change": 0.61,
+          "price": 4955.0
         },
         {
           "ticker": "7711.T",
-          "change": -0.53,
-          "price": 7450.0
+          "change": -1.2,
+          "price": 7400.0
         },
         {
           "ticker": "3446.T",
-          "change": 2.25,
-          "price": 1363.0
+          "change": 3.38,
+          "price": 1378.0
         },
         {
           "ticker": "6378.T",
-          "change": 0.17,
-          "price": 1182.0
+          "change": 1.02,
+          "price": 1192.0
         },
         {
           "ticker": "6864.T",
-          "change": 2.45,
-          "price": 1172.0
+          "change": 2.36,
+          "price": 1171.0
         }
       ]
     },
     "Space": {
-      "change_percent": 0.59,
+      "change_percent": 0.68,
       "tickers": [
         {
           "ticker": "7011.T",
-          "change": 1.26,
-          "price": 3931.0
+          "change": 1.73,
+          "price": 3949.0
         },
         {
           "ticker": "7012.T",
-          "change": -0.62,
-          "price": 9873.0
+          "change": -0.31,
+          "price": 9904.0
         },
         {
           "ticker": "9412.T",
-          "change": 0.89,
-          "price": 1934.0
+          "change": 1.46,
+          "price": 1945.0
         },
         {
           "ticker": "7751.T",
-          "change": 0.02,
-          "price": 4588.0
+          "change": 0.26,
+          "price": 4599.0
         },
         {
           "ticker": "9433.T",
-          "change": 0.04,
-          "price": 2699.0
+          "change": -0.24,
+          "price": 2691.5
         },
         {
           "ticker": "9348.T",
-          "change": 0.43,
-          "price": 462.0
+          "change": 0.65,
+          "price": 463.0
         },
         {
           "ticker": "5595.T",
@@ -316,20 +315,2218 @@
         },
         {
           "ticker": "186A.T",
-          "change": 0.73,
-          "price": 693.0
+          "change": 0.87,
+          "price": 694.0
         },
         {
           "ticker": "290A.T",
-          "change": 2.98,
-          "price": 1105.0
+          "change": 2.61,
+          "price": 1101.0
         },
         {
           "ticker": "402A.T",
-          "change": 0.19,
-          "price": 535.0
+          "change": -0.19,
+          "price": 533.0
         }
       ]
     }
-  }
+  },
+  "history": [
+    {
+      "date": "2024-11-28",
+      "AI_Robot": 0.0,
+      "Quantum": 0.0,
+      "Semi": 0.0,
+      "Bio": 0.0,
+      "Fusion": 0.0,
+      "Space": 0.0
+    },
+    {
+      "date": "2024-11-29",
+      "AI_Robot": 1.52,
+      "Quantum": 0.09,
+      "Semi": -1.29,
+      "Bio": 0.64,
+      "Fusion": -0.02,
+      "Space": 2.34
+    },
+    {
+      "date": "2024-12-02",
+      "AI_Robot": 4.96,
+      "Quantum": 0.79,
+      "Semi": -1.31,
+      "Bio": 1.32,
+      "Fusion": 1.99,
+      "Space": 0.42
+    },
+    {
+      "date": "2024-12-03",
+      "AI_Robot": 6.3,
+      "Quantum": 2.24,
+      "Semi": 2.06,
+      "Bio": 1.72,
+      "Fusion": 4.61,
+      "Space": 1.16
+    },
+    {
+      "date": "2024-12-04",
+      "AI_Robot": 5.08,
+      "Quantum": 2.48,
+      "Semi": 0.77,
+      "Bio": 0.48,
+      "Fusion": 3.41,
+      "Space": 0.61
+    },
+    {
+      "date": "2024-12-05",
+      "AI_Robot": 4.42,
+      "Quantum": 2.64,
+      "Semi": 0.26,
+      "Bio": -0.43,
+      "Fusion": 3.73,
+      "Space": -0.02
+    },
+    {
+      "date": "2024-12-06",
+      "AI_Robot": 4.36,
+      "Quantum": 1.91,
+      "Semi": -2.5,
+      "Bio": -1.11,
+      "Fusion": 2.49,
+      "Space": -0.09
+    },
+    {
+      "date": "2024-12-09",
+      "AI_Robot": 4.71,
+      "Quantum": 2.9,
+      "Semi": -4.49,
+      "Bio": -1.44,
+      "Fusion": 1.81,
+      "Space": -0.54
+    },
+    {
+      "date": "2024-12-10",
+      "AI_Robot": 3.97,
+      "Quantum": 1.53,
+      "Semi": -2.81,
+      "Bio": -1.61,
+      "Fusion": 1.08,
+      "Space": -0.06
+    },
+    {
+      "date": "2024-12-11",
+      "AI_Robot": 3.24,
+      "Quantum": 3.13,
+      "Semi": -4.01,
+      "Bio": -3.01,
+      "Fusion": 2.82,
+      "Space": 1.88
+    },
+    {
+      "date": "2024-12-12",
+      "AI_Robot": 4.46,
+      "Quantum": 3.35,
+      "Semi": -3.13,
+      "Bio": -3.7,
+      "Fusion": 2.67,
+      "Space": 2.2
+    },
+    {
+      "date": "2024-12-13",
+      "AI_Robot": 3.78,
+      "Quantum": 2.42,
+      "Semi": -4.02,
+      "Bio": -4.54,
+      "Fusion": 1.28,
+      "Space": 0.51
+    },
+    {
+      "date": "2024-12-16",
+      "AI_Robot": 3.27,
+      "Quantum": 2.19,
+      "Semi": -3.23,
+      "Bio": -4.92,
+      "Fusion": 1.69,
+      "Space": -0.43
+    },
+    {
+      "date": "2024-12-17",
+      "AI_Robot": 3.85,
+      "Quantum": 3.08,
+      "Semi": -4.47,
+      "Bio": -5.92,
+      "Fusion": 2.06,
+      "Space": -0.05
+    },
+    {
+      "date": "2024-12-18",
+      "AI_Robot": 3.41,
+      "Quantum": 5.61,
+      "Semi": -3.09,
+      "Bio": -6.2,
+      "Fusion": 3.29,
+      "Space": -0.7
+    },
+    {
+      "date": "2024-12-19",
+      "AI_Robot": 1.75,
+      "Quantum": 4.94,
+      "Semi": -5.27,
+      "Bio": -6.64,
+      "Fusion": 2.33,
+      "Space": 0.7
+    },
+    {
+      "date": "2024-12-20",
+      "AI_Robot": 2.49,
+      "Quantum": 4.36,
+      "Semi": -6.48,
+      "Bio": -7.34,
+      "Fusion": 1.61,
+      "Space": 2.83
+    },
+    {
+      "date": "2024-12-23",
+      "AI_Robot": 3.95,
+      "Quantum": 4.65,
+      "Semi": -4.78,
+      "Bio": -6.84,
+      "Fusion": 2.35,
+      "Space": 2.71
+    },
+    {
+      "date": "2024-12-24",
+      "AI_Robot": 3.81,
+      "Quantum": 3.42,
+      "Semi": -5.12,
+      "Bio": -6.92,
+      "Fusion": 1.14,
+      "Space": 1.21
+    },
+    {
+      "date": "2024-12-25",
+      "AI_Robot": 4.46,
+      "Quantum": 3.29,
+      "Semi": -4.83,
+      "Bio": -7.42,
+      "Fusion": 2.58,
+      "Space": 1.44
+    },
+    {
+      "date": "2024-12-26",
+      "AI_Robot": 4.34,
+      "Quantum": 4.11,
+      "Semi": -4.29,
+      "Bio": -7.66,
+      "Fusion": 3.68,
+      "Space": 3.29
+    },
+    {
+      "date": "2024-12-27",
+      "AI_Robot": 5.88,
+      "Quantum": 7.14,
+      "Semi": -2.21,
+      "Bio": -4.7,
+      "Fusion": 5.7,
+      "Space": 3.34
+    },
+    {
+      "date": "2024-12-30",
+      "AI_Robot": 7.53,
+      "Quantum": 10.82,
+      "Semi": -2.92,
+      "Bio": -5.39,
+      "Fusion": 7.19,
+      "Space": 3.4
+    },
+    {
+      "date": "2025-01-06",
+      "AI_Robot": 5.4,
+      "Quantum": 12.04,
+      "Semi": -1.21,
+      "Bio": -7.62,
+      "Fusion": 8.38,
+      "Space": 2.46
+    },
+    {
+      "date": "2025-01-07",
+      "AI_Robot": 6.8,
+      "Quantum": 14.39,
+      "Semi": 4.52,
+      "Bio": -7.4,
+      "Fusion": 11.77,
+      "Space": 3.02
+    },
+    {
+      "date": "2025-01-08",
+      "AI_Robot": 5.32,
+      "Quantum": 11.27,
+      "Semi": 8.51,
+      "Bio": -8.26,
+      "Fusion": 15.36,
+      "Space": 6.36
+    },
+    {
+      "date": "2025-01-09",
+      "AI_Robot": 3.7,
+      "Quantum": 6.01,
+      "Semi": 6.48,
+      "Bio": -8.12,
+      "Fusion": 8.14,
+      "Space": 5.24
+    },
+    {
+      "date": "2025-01-10",
+      "AI_Robot": 2.8,
+      "Quantum": 6.16,
+      "Semi": 6.99,
+      "Bio": -9.36,
+      "Fusion": 7.19,
+      "Space": 5.82
+    },
+    {
+      "date": "2025-01-14",
+      "AI_Robot": 1.36,
+      "Quantum": 3.55,
+      "Semi": 0.51,
+      "Bio": -9.6,
+      "Fusion": 3.95,
+      "Space": 2.81
+    },
+    {
+      "date": "2025-01-15",
+      "AI_Robot": 2.46,
+      "Quantum": 2.33,
+      "Semi": -1.13,
+      "Bio": -11.09,
+      "Fusion": 2.89,
+      "Space": -0.66
+    },
+    {
+      "date": "2025-01-16",
+      "AI_Robot": 2.15,
+      "Quantum": 1.77,
+      "Semi": 1.33,
+      "Bio": -11.94,
+      "Fusion": 3.05,
+      "Space": -3.41
+    },
+    {
+      "date": "2025-01-17",
+      "AI_Robot": 1.95,
+      "Quantum": 1.43,
+      "Semi": 0.98,
+      "Bio": -12.83,
+      "Fusion": 3.7,
+      "Space": -6.39
+    },
+    {
+      "date": "2025-01-20",
+      "AI_Robot": 3.38,
+      "Quantum": 2.15,
+      "Semi": 3.57,
+      "Bio": -11.49,
+      "Fusion": 4.2,
+      "Space": -4.08
+    },
+    {
+      "date": "2025-01-21",
+      "AI_Robot": 3.75,
+      "Quantum": 2.36,
+      "Semi": 4.32,
+      "Bio": -11.42,
+      "Fusion": 5.09,
+      "Space": -4.98
+    },
+    {
+      "date": "2025-01-22",
+      "AI_Robot": 5.16,
+      "Quantum": 3.53,
+      "Semi": 9.1,
+      "Bio": -11.47,
+      "Fusion": 9.29,
+      "Space": -2.74
+    },
+    {
+      "date": "2025-01-23",
+      "AI_Robot": 5.65,
+      "Quantum": 2.99,
+      "Semi": 9.22,
+      "Bio": -11.83,
+      "Fusion": 12.39,
+      "Space": -3.32
+    },
+    {
+      "date": "2025-01-24",
+      "AI_Robot": 8.29,
+      "Quantum": 4.22,
+      "Semi": 7.9,
+      "Bio": -11.15,
+      "Fusion": 12.79,
+      "Space": -1.84
+    },
+    {
+      "date": "2025-01-27",
+      "AI_Robot": 6.01,
+      "Quantum": 2.8,
+      "Semi": 4.22,
+      "Bio": -10.08,
+      "Fusion": 8.29,
+      "Space": -2.25
+    },
+    {
+      "date": "2025-01-28",
+      "AI_Robot": 8.53,
+      "Quantum": 2.55,
+      "Semi": 0.4,
+      "Bio": -9.12,
+      "Fusion": 5.14,
+      "Space": -3.3
+    },
+    {
+      "date": "2025-01-29",
+      "AI_Robot": 10.57,
+      "Quantum": 2.49,
+      "Semi": 1.17,
+      "Bio": -9.12,
+      "Fusion": 5.16,
+      "Space": -2.01
+    },
+    {
+      "date": "2025-01-30",
+      "AI_Robot": 8.08,
+      "Quantum": 1.97,
+      "Semi": 1.74,
+      "Bio": -9.43,
+      "Fusion": 5.82,
+      "Space": 0.94
+    },
+    {
+      "date": "2025-01-31",
+      "AI_Robot": 7.83,
+      "Quantum": 4.36,
+      "Semi": 2.83,
+      "Bio": -9.41,
+      "Fusion": 6.95,
+      "Space": 2.73
+    },
+    {
+      "date": "2025-02-03",
+      "AI_Robot": 4.11,
+      "Quantum": 3.15,
+      "Semi": -0.8,
+      "Bio": -11.95,
+      "Fusion": 3.98,
+      "Space": 2.46
+    },
+    {
+      "date": "2025-02-04",
+      "AI_Robot": 5.94,
+      "Quantum": 4.21,
+      "Semi": 1.28,
+      "Bio": -11.96,
+      "Fusion": 6.78,
+      "Space": 2.01
+    },
+    {
+      "date": "2025-02-05",
+      "AI_Robot": 5.99,
+      "Quantum": 4.7,
+      "Semi": 1.35,
+      "Bio": -12.64,
+      "Fusion": 9.72,
+      "Space": 1.23
+    },
+    {
+      "date": "2025-02-06",
+      "AI_Robot": 7.42,
+      "Quantum": 4.99,
+      "Semi": 3.06,
+      "Bio": -11.11,
+      "Fusion": 10.2,
+      "Space": 7.33
+    },
+    {
+      "date": "2025-02-07",
+      "AI_Robot": 7.34,
+      "Quantum": 5.68,
+      "Semi": 0.36,
+      "Bio": -9.32,
+      "Fusion": 9.83,
+      "Space": 7.34
+    },
+    {
+      "date": "2025-02-10",
+      "AI_Robot": 8.42,
+      "Quantum": 7.07,
+      "Semi": 0.58,
+      "Bio": -7.11,
+      "Fusion": 13.64,
+      "Space": 6.65
+    },
+    {
+      "date": "2025-02-12",
+      "AI_Robot": 10.22,
+      "Quantum": 7.04,
+      "Semi": 0.4,
+      "Bio": -9.48,
+      "Fusion": 15.66,
+      "Space": 10.49
+    },
+    {
+      "date": "2025-02-13",
+      "AI_Robot": 9.54,
+      "Quantum": 7.88,
+      "Semi": 2.63,
+      "Bio": -7.06,
+      "Fusion": 12.06,
+      "Space": 9.05
+    },
+    {
+      "date": "2025-02-14",
+      "AI_Robot": 9.38,
+      "Quantum": 7.9,
+      "Semi": 2.12,
+      "Bio": -6.74,
+      "Fusion": 8.3,
+      "Space": 7.28
+    },
+    {
+      "date": "2025-02-17",
+      "AI_Robot": 6.88,
+      "Quantum": 8.23,
+      "Semi": 4.43,
+      "Bio": -5.93,
+      "Fusion": 8.32,
+      "Space": 6.85
+    },
+    {
+      "date": "2025-02-18",
+      "AI_Robot": 6.42,
+      "Quantum": 8.13,
+      "Semi": 6.22,
+      "Bio": -4.26,
+      "Fusion": 10.5,
+      "Space": 7.92
+    },
+    {
+      "date": "2025-02-19",
+      "AI_Robot": 6.47,
+      "Quantum": 7.79,
+      "Semi": 7.4,
+      "Bio": -5.28,
+      "Fusion": 8.78,
+      "Space": 6.5
+    },
+    {
+      "date": "2025-02-20",
+      "AI_Robot": 6.14,
+      "Quantum": 6.1,
+      "Semi": 5.89,
+      "Bio": -5.96,
+      "Fusion": 6.54,
+      "Space": 6.16
+    },
+    {
+      "date": "2025-02-21",
+      "AI_Robot": 5.8,
+      "Quantum": 5.9,
+      "Semi": 7.8,
+      "Bio": -5.18,
+      "Fusion": 5.15,
+      "Space": 6.34
+    },
+    {
+      "date": "2025-02-25",
+      "AI_Robot": 3.87,
+      "Quantum": 4.07,
+      "Semi": 2.56,
+      "Bio": -5.2,
+      "Fusion": 1.22,
+      "Space": 5.34
+    },
+    {
+      "date": "2025-02-26",
+      "AI_Robot": 2.64,
+      "Quantum": 3.29,
+      "Semi": 0.98,
+      "Bio": -4.12,
+      "Fusion": 1.39,
+      "Space": 4.41
+    },
+    {
+      "date": "2025-02-27",
+      "AI_Robot": 3.78,
+      "Quantum": 3.85,
+      "Semi": 1.74,
+      "Bio": -5.83,
+      "Fusion": 2.42,
+      "Space": 6.33
+    },
+    {
+      "date": "2025-02-28",
+      "AI_Robot": 0.01,
+      "Quantum": 1.45,
+      "Semi": -4.28,
+      "Bio": -7.57,
+      "Fusion": -1.58,
+      "Space": 4.19
+    },
+    {
+      "date": "2025-03-03",
+      "AI_Robot": 1.62,
+      "Quantum": 3.13,
+      "Semi": -4.64,
+      "Bio": -5.45,
+      "Fusion": 0.3,
+      "Space": 6.91
+    },
+    {
+      "date": "2025-03-04",
+      "AI_Robot": 0.09,
+      "Quantum": 2.59,
+      "Semi": -7.75,
+      "Bio": -6.28,
+      "Fusion": -0.84,
+      "Space": 6.69
+    },
+    {
+      "date": "2025-03-05",
+      "AI_Robot": 0.4,
+      "Quantum": 3.81,
+      "Semi": -7.97,
+      "Bio": -8.16,
+      "Fusion": 1.64,
+      "Space": 7.81
+    },
+    {
+      "date": "2025-03-06",
+      "AI_Robot": 2.36,
+      "Quantum": 5.57,
+      "Semi": -8.35,
+      "Bio": -8.52,
+      "Fusion": 2.6,
+      "Space": 12.38
+    },
+    {
+      "date": "2025-03-07",
+      "AI_Robot": 0.36,
+      "Quantum": 3.62,
+      "Semi": -10.16,
+      "Bio": -10.24,
+      "Fusion": 0.25,
+      "Space": 8.87
+    },
+    {
+      "date": "2025-03-10",
+      "AI_Robot": 1.87,
+      "Quantum": 3.03,
+      "Semi": -8.02,
+      "Bio": -11.0,
+      "Fusion": 0.2,
+      "Space": 6.5
+    },
+    {
+      "date": "2025-03-11",
+      "AI_Robot": -0.38,
+      "Quantum": 1.31,
+      "Semi": -8.46,
+      "Bio": -11.51,
+      "Fusion": -0.96,
+      "Space": 4.89
+    },
+    {
+      "date": "2025-03-12",
+      "AI_Robot": 1.49,
+      "Quantum": 3.04,
+      "Semi": -9.27,
+      "Bio": -9.61,
+      "Fusion": -0.23,
+      "Space": 10.53
+    },
+    {
+      "date": "2025-03-13",
+      "AI_Robot": 0.53,
+      "Quantum": 3.1,
+      "Semi": -7.51,
+      "Bio": -9.49,
+      "Fusion": 0.14,
+      "Space": 10.52
+    },
+    {
+      "date": "2025-03-14",
+      "AI_Robot": 1.07,
+      "Quantum": 4.64,
+      "Semi": -5.43,
+      "Bio": -8.71,
+      "Fusion": 3.96,
+      "Space": 12.89
+    },
+    {
+      "date": "2025-03-17",
+      "AI_Robot": 2.57,
+      "Quantum": 6.8,
+      "Semi": -5.34,
+      "Bio": -7.84,
+      "Fusion": 6.58,
+      "Space": 16.38
+    },
+    {
+      "date": "2025-03-18",
+      "AI_Robot": 2.45,
+      "Quantum": 7.16,
+      "Semi": -3.63,
+      "Bio": -6.94,
+      "Fusion": 6.62,
+      "Space": 14.88
+    },
+    {
+      "date": "2025-03-19",
+      "AI_Robot": 1.84,
+      "Quantum": 6.68,
+      "Semi": -7.17,
+      "Bio": -7.2,
+      "Fusion": 6.8,
+      "Space": 15.16
+    },
+    {
+      "date": "2025-03-21",
+      "AI_Robot": 1.78,
+      "Quantum": 5.34,
+      "Semi": -6.29,
+      "Bio": -6.11,
+      "Fusion": 6.11,
+      "Space": 14.88
+    },
+    {
+      "date": "2025-03-24",
+      "AI_Robot": 0.69,
+      "Quantum": 5.39,
+      "Semi": -8.15,
+      "Bio": -6.98,
+      "Fusion": 6.01,
+      "Space": 14.08
+    },
+    {
+      "date": "2025-03-25",
+      "AI_Robot": 1.18,
+      "Quantum": 5.08,
+      "Semi": -8.37,
+      "Bio": -5.73,
+      "Fusion": 6.05,
+      "Space": 14.6
+    },
+    {
+      "date": "2025-03-26",
+      "AI_Robot": 3.68,
+      "Quantum": 6.05,
+      "Semi": -7.89,
+      "Bio": -2.53,
+      "Fusion": 6.18,
+      "Space": 14.02
+    },
+    {
+      "date": "2025-03-27",
+      "AI_Robot": 2.63,
+      "Quantum": 5.54,
+      "Semi": -10.4,
+      "Bio": -2.89,
+      "Fusion": 4.37,
+      "Space": 13.92
+    },
+    {
+      "date": "2025-03-28",
+      "AI_Robot": 1.41,
+      "Quantum": 5.23,
+      "Semi": -12.47,
+      "Bio": -3.45,
+      "Fusion": 3.38,
+      "Space": 14.96
+    },
+    {
+      "date": "2025-03-31",
+      "AI_Robot": -2.66,
+      "Quantum": 2.57,
+      "Semi": -18.02,
+      "Bio": -5.95,
+      "Fusion": -0.85,
+      "Space": 13.02
+    },
+    {
+      "date": "2025-04-01",
+      "AI_Robot": -3.73,
+      "Quantum": 2.54,
+      "Semi": -18.87,
+      "Bio": -4.88,
+      "Fusion": -2.2,
+      "Space": 10.46
+    },
+    {
+      "date": "2025-04-02",
+      "AI_Robot": -4.23,
+      "Quantum": 2.32,
+      "Semi": -18.8,
+      "Bio": -7.46,
+      "Fusion": -1.02,
+      "Space": 15.18
+    },
+    {
+      "date": "2025-04-03",
+      "AI_Robot": -7.35,
+      "Quantum": -0.94,
+      "Semi": -22.47,
+      "Bio": -7.92,
+      "Fusion": -6.09,
+      "Space": 13.4
+    },
+    {
+      "date": "2025-04-04",
+      "AI_Robot": -11.75,
+      "Quantum": -5.59,
+      "Semi": -28.05,
+      "Bio": -9.82,
+      "Fusion": -12.58,
+      "Space": 6.94
+    },
+    {
+      "date": "2025-04-07",
+      "AI_Robot": -21.21,
+      "Quantum": -15.18,
+      "Semi": -36.92,
+      "Bio": -18.62,
+      "Fusion": -23.12,
+      "Space": -2.54
+    },
+    {
+      "date": "2025-04-08",
+      "AI_Robot": -14.85,
+      "Quantum": -8.35,
+      "Semi": -29.0,
+      "Bio": -12.77,
+      "Fusion": -13.75,
+      "Space": 7.27
+    },
+    {
+      "date": "2025-04-09",
+      "AI_Robot": -18.65,
+      "Quantum": -11.45,
+      "Semi": -33.29,
+      "Bio": -17.45,
+      "Fusion": -18.02,
+      "Space": 3.69
+    },
+    {
+      "date": "2025-04-10",
+      "AI_Robot": -10.77,
+      "Quantum": -2.61,
+      "Semi": -24.93,
+      "Bio": -12.33,
+      "Fusion": -10.08,
+      "Space": 15.64
+    },
+    {
+      "date": "2025-04-11",
+      "AI_Robot": -11.15,
+      "Quantum": -3.0,
+      "Semi": -25.51,
+      "Bio": -13.27,
+      "Fusion": -10.72,
+      "Space": 15.99
+    },
+    {
+      "date": "2025-04-14",
+      "AI_Robot": -9.74,
+      "Quantum": -1.43,
+      "Semi": -22.27,
+      "Bio": -9.47,
+      "Fusion": -10.71,
+      "Space": 15.26
+    },
+    {
+      "date": "2025-04-15",
+      "AI_Robot": -8.79,
+      "Quantum": -0.75,
+      "Semi": -22.38,
+      "Bio": -7.54,
+      "Fusion": -9.65,
+      "Space": 19.51
+    },
+    {
+      "date": "2025-04-16",
+      "AI_Robot": -9.13,
+      "Quantum": -1.71,
+      "Semi": -26.2,
+      "Bio": -8.42,
+      "Fusion": -11.64,
+      "Space": 18.55
+    },
+    {
+      "date": "2025-04-17",
+      "AI_Robot": -8.23,
+      "Quantum": -0.56,
+      "Semi": -24.53,
+      "Bio": -5.7,
+      "Fusion": -9.98,
+      "Space": 26.02
+    },
+    {
+      "date": "2025-04-18",
+      "AI_Robot": -7.71,
+      "Quantum": 1.24,
+      "Semi": -25.29,
+      "Bio": 0.05,
+      "Fusion": -8.68,
+      "Space": 27.84
+    },
+    {
+      "date": "2025-04-21",
+      "AI_Robot": -7.51,
+      "Quantum": 0.55,
+      "Semi": -26.09,
+      "Bio": -1.36,
+      "Fusion": -10.14,
+      "Space": 24.42
+    },
+    {
+      "date": "2025-04-22",
+      "AI_Robot": -8.21,
+      "Quantum": 0.13,
+      "Semi": -27.24,
+      "Bio": -0.67,
+      "Fusion": -10.79,
+      "Space": 21.02
+    },
+    {
+      "date": "2025-04-23",
+      "AI_Robot": -7.42,
+      "Quantum": 1.49,
+      "Semi": -24.85,
+      "Bio": -2.17,
+      "Fusion": -8.46,
+      "Space": 23.96
+    },
+    {
+      "date": "2025-04-24",
+      "AI_Robot": -6.68,
+      "Quantum": 1.45,
+      "Semi": -23.43,
+      "Bio": -4.23,
+      "Fusion": -7.18,
+      "Space": 26.16
+    },
+    {
+      "date": "2025-04-25",
+      "AI_Robot": -4.48,
+      "Quantum": 3.84,
+      "Semi": -19.83,
+      "Bio": -1.39,
+      "Fusion": -4.42,
+      "Space": 30.42
+    },
+    {
+      "date": "2025-04-28",
+      "AI_Robot": -5.56,
+      "Quantum": 4.4,
+      "Semi": -21.19,
+      "Bio": -1.61,
+      "Fusion": -3.63,
+      "Space": 30.29
+    },
+    {
+      "date": "2025-04-30",
+      "AI_Robot": -5.86,
+      "Quantum": 5.53,
+      "Semi": -20.83,
+      "Bio": -0.74,
+      "Fusion": -3.39,
+      "Space": 31.02
+    },
+    {
+      "date": "2025-05-01",
+      "AI_Robot": -5.13,
+      "Quantum": 6.42,
+      "Semi": -18.6,
+      "Bio": 3.72,
+      "Fusion": -2.09,
+      "Space": 35.06
+    },
+    {
+      "date": "2025-05-02",
+      "AI_Robot": -5.14,
+      "Quantum": 5.94,
+      "Semi": -18.9,
+      "Bio": 4.64,
+      "Fusion": -2.38,
+      "Space": 34.88
+    },
+    {
+      "date": "2025-05-07",
+      "AI_Robot": -5.41,
+      "Quantum": 7.54,
+      "Semi": -18.7,
+      "Bio": 2.6,
+      "Fusion": -1.67,
+      "Space": 31.56
+    },
+    {
+      "date": "2025-05-08",
+      "AI_Robot": -6.04,
+      "Quantum": 8.34,
+      "Semi": -16.16,
+      "Bio": 1.34,
+      "Fusion": 1.34,
+      "Space": 33.47
+    },
+    {
+      "date": "2025-05-09",
+      "AI_Robot": -4.65,
+      "Quantum": 10.59,
+      "Semi": -15.41,
+      "Bio": 2.88,
+      "Fusion": 2.7,
+      "Space": 32.62
+    },
+    {
+      "date": "2025-05-12",
+      "AI_Robot": -3.56,
+      "Quantum": 10.69,
+      "Semi": -11.25,
+      "Bio": -1.59,
+      "Fusion": 5.69,
+      "Space": 39.98
+    },
+    {
+      "date": "2025-05-13",
+      "AI_Robot": -1.54,
+      "Quantum": 10.25,
+      "Semi": -8.89,
+      "Bio": 3.4,
+      "Fusion": 6.04,
+      "Space": 40.89
+    },
+    {
+      "date": "2025-05-14",
+      "AI_Robot": -1.03,
+      "Quantum": 10.53,
+      "Semi": -5.1,
+      "Bio": 1.7,
+      "Fusion": 6.67,
+      "Space": 41.34
+    },
+    {
+      "date": "2025-05-15",
+      "AI_Robot": 0.33,
+      "Quantum": 11.82,
+      "Semi": -6.92,
+      "Bio": 2.33,
+      "Fusion": 6.06,
+      "Space": 48.22
+    },
+    {
+      "date": "2025-05-16",
+      "AI_Robot": 2.71,
+      "Quantum": 12.51,
+      "Semi": -8.88,
+      "Bio": 2.63,
+      "Fusion": 6.21,
+      "Space": 49.98
+    },
+    {
+      "date": "2025-05-19",
+      "AI_Robot": 1.93,
+      "Quantum": 13.74,
+      "Semi": -10.87,
+      "Bio": 7.11,
+      "Fusion": 6.82,
+      "Space": 48.44
+    },
+    {
+      "date": "2025-05-20",
+      "AI_Robot": 1.34,
+      "Quantum": 13.91,
+      "Semi": -9.95,
+      "Bio": 11.68,
+      "Fusion": 8.82,
+      "Space": 47.82
+    },
+    {
+      "date": "2025-05-21",
+      "AI_Robot": -0.09,
+      "Quantum": 12.79,
+      "Semi": -11.77,
+      "Bio": 9.26,
+      "Fusion": 9.32,
+      "Space": 52.52
+    },
+    {
+      "date": "2025-05-22",
+      "AI_Robot": -1.15,
+      "Quantum": 12.63,
+      "Semi": -12.46,
+      "Bio": 9.04,
+      "Fusion": 9.79,
+      "Space": 48.49
+    },
+    {
+      "date": "2025-05-23",
+      "AI_Robot": -1.39,
+      "Quantum": 16.17,
+      "Semi": -12.34,
+      "Bio": 9.45,
+      "Fusion": 13.47,
+      "Space": 48.82
+    },
+    {
+      "date": "2025-05-26",
+      "AI_Robot": 0.77,
+      "Quantum": 18.56,
+      "Semi": -9.37,
+      "Bio": 12.85,
+      "Fusion": 13.75,
+      "Space": 46.59
+    },
+    {
+      "date": "2025-05-27",
+      "AI_Robot": 1.59,
+      "Quantum": 22.24,
+      "Semi": -9.43,
+      "Bio": 14.69,
+      "Fusion": 16.39,
+      "Space": 50.65
+    },
+    {
+      "date": "2025-05-28",
+      "AI_Robot": 0.37,
+      "Quantum": 23.24,
+      "Semi": -9.11,
+      "Bio": 17.17,
+      "Fusion": 15.67,
+      "Space": 55.69
+    },
+    {
+      "date": "2025-05-29",
+      "AI_Robot": 2.46,
+      "Quantum": 24.03,
+      "Semi": -6.52,
+      "Bio": 16.96,
+      "Fusion": 18.05,
+      "Space": 51.83
+    },
+    {
+      "date": "2025-05-30",
+      "AI_Robot": 2.44,
+      "Quantum": 26.61,
+      "Semi": -9.49,
+      "Bio": 15.97,
+      "Fusion": 17.85,
+      "Space": 51.96
+    },
+    {
+      "date": "2025-06-02",
+      "AI_Robot": 1.76,
+      "Quantum": 23.68,
+      "Semi": -12.07,
+      "Bio": 17.85,
+      "Fusion": 17.5,
+      "Space": 49.85
+    },
+    {
+      "date": "2025-06-03",
+      "AI_Robot": 2.13,
+      "Quantum": 23.63,
+      "Semi": -11.11,
+      "Bio": 18.16,
+      "Fusion": 18.6,
+      "Space": 57.21
+    },
+    {
+      "date": "2025-06-04",
+      "AI_Robot": 1.25,
+      "Quantum": 24.77,
+      "Semi": -10.63,
+      "Bio": 21.53,
+      "Fusion": 20.12,
+      "Space": 58.61
+    },
+    {
+      "date": "2025-06-05",
+      "AI_Robot": 2.83,
+      "Quantum": 22.56,
+      "Semi": -9.24,
+      "Bio": 19.23,
+      "Fusion": 18.74,
+      "Space": 54.26
+    },
+    {
+      "date": "2025-06-06",
+      "AI_Robot": 1.6,
+      "Quantum": 23.48,
+      "Semi": -8.34,
+      "Bio": 17.16,
+      "Fusion": 18.77,
+      "Space": 46.21
+    },
+    {
+      "date": "2025-06-09",
+      "AI_Robot": 2.5,
+      "Quantum": 25.99,
+      "Semi": -6.78,
+      "Bio": 18.14,
+      "Fusion": 20.86,
+      "Space": 41.22
+    },
+    {
+      "date": "2025-06-10",
+      "AI_Robot": 5.84,
+      "Quantum": 26.35,
+      "Semi": -5.55,
+      "Bio": 20.55,
+      "Fusion": 20.46,
+      "Space": 41.26
+    },
+    {
+      "date": "2025-06-11",
+      "AI_Robot": 6.52,
+      "Quantum": 27.43,
+      "Semi": -0.85,
+      "Bio": 21.13,
+      "Fusion": 18.66,
+      "Space": 38.75
+    },
+    {
+      "date": "2025-06-12",
+      "AI_Robot": 7.28,
+      "Quantum": 29.27,
+      "Semi": -1.83,
+      "Bio": 19.44,
+      "Fusion": 21.25,
+      "Space": 39.48
+    },
+    {
+      "date": "2025-06-13",
+      "AI_Robot": 4.45,
+      "Quantum": 27.87,
+      "Semi": -5.19,
+      "Bio": 17.82,
+      "Fusion": 19.49,
+      "Space": 39.34
+    },
+    {
+      "date": "2025-06-16",
+      "AI_Robot": 6.18,
+      "Quantum": 30.28,
+      "Semi": -2.36,
+      "Bio": 15.95,
+      "Fusion": 21.58,
+      "Space": 44.05
+    },
+    {
+      "date": "2025-06-17",
+      "AI_Robot": 7.68,
+      "Quantum": 31.63,
+      "Semi": 1.04,
+      "Bio": 12.64,
+      "Fusion": 23.32,
+      "Space": 37.52
+    },
+    {
+      "date": "2025-06-18",
+      "AI_Robot": 9.63,
+      "Quantum": 31.3,
+      "Semi": 1.8,
+      "Bio": 11.51,
+      "Fusion": 21.89,
+      "Space": 35.52
+    },
+    {
+      "date": "2025-06-19",
+      "AI_Robot": 11.64,
+      "Quantum": 32.06,
+      "Semi": -0.43,
+      "Bio": 7.34,
+      "Fusion": 22.13,
+      "Space": 33.99
+    },
+    {
+      "date": "2025-06-20",
+      "AI_Robot": 11.3,
+      "Quantum": 32.66,
+      "Semi": 3.03,
+      "Bio": 8.35,
+      "Fusion": 21.7,
+      "Space": 32.14
+    },
+    {
+      "date": "2025-06-23",
+      "AI_Robot": 10.81,
+      "Quantum": 28.61,
+      "Semi": 1.93,
+      "Bio": 8.99,
+      "Fusion": 20.23,
+      "Space": 34.66
+    },
+    {
+      "date": "2025-06-24",
+      "AI_Robot": 11.89,
+      "Quantum": 30.29,
+      "Semi": 5.65,
+      "Bio": 8.34,
+      "Fusion": 22.48,
+      "Space": 35.25
+    },
+    {
+      "date": "2025-06-25",
+      "AI_Robot": 11.92,
+      "Quantum": 29.29,
+      "Semi": 9.55,
+      "Bio": 10.14,
+      "Fusion": 23.21,
+      "Space": 36.03
+    },
+    {
+      "date": "2025-06-26",
+      "AI_Robot": 11.92,
+      "Quantum": 28.59,
+      "Semi": 12.73,
+      "Bio": 3.97,
+      "Fusion": 25.19,
+      "Space": 37.26
+    },
+    {
+      "date": "2025-06-27",
+      "AI_Robot": 11.34,
+      "Quantum": 29.75,
+      "Semi": 15.94,
+      "Bio": 1.88,
+      "Fusion": 26.65,
+      "Space": 37.84
+    },
+    {
+      "date": "2025-06-30",
+      "AI_Robot": 14.21,
+      "Quantum": 31.22,
+      "Semi": 14.95,
+      "Bio": 4.88,
+      "Fusion": 25.0,
+      "Space": 36.98
+    },
+    {
+      "date": "2025-07-01",
+      "AI_Robot": 12.07,
+      "Quantum": 29.25,
+      "Semi": 14.26,
+      "Bio": 2.16,
+      "Fusion": 25.13,
+      "Space": 35.1
+    },
+    {
+      "date": "2025-07-02",
+      "AI_Robot": 8.08,
+      "Quantum": 27.3,
+      "Semi": 10.87,
+      "Bio": -0.41,
+      "Fusion": 22.39,
+      "Space": 32.7
+    },
+    {
+      "date": "2025-07-03",
+      "AI_Robot": 7.8,
+      "Quantum": 26.03,
+      "Semi": 12.64,
+      "Bio": -0.52,
+      "Fusion": 22.97,
+      "Space": 29.93
+    },
+    {
+      "date": "2025-07-04",
+      "AI_Robot": 6.65,
+      "Quantum": 24.79,
+      "Semi": 11.97,
+      "Bio": -0.24,
+      "Fusion": 21.88,
+      "Space": 31.12
+    },
+    {
+      "date": "2025-07-07",
+      "AI_Robot": 5.89,
+      "Quantum": 24.78,
+      "Semi": 11.69,
+      "Bio": -1.61,
+      "Fusion": 21.67,
+      "Space": 31.31
+    },
+    {
+      "date": "2025-07-08",
+      "AI_Robot": 8.02,
+      "Quantum": 26.15,
+      "Semi": 13.34,
+      "Bio": -3.03,
+      "Fusion": 24.97,
+      "Space": 34.06
+    },
+    {
+      "date": "2025-07-09",
+      "AI_Robot": 8.93,
+      "Quantum": 26.02,
+      "Semi": 12.18,
+      "Bio": -1.11,
+      "Fusion": 24.92,
+      "Space": 33.23
+    },
+    {
+      "date": "2025-07-10",
+      "AI_Robot": 10.93,
+      "Quantum": 26.0,
+      "Semi": 12.91,
+      "Bio": -0.09,
+      "Fusion": 25.25,
+      "Space": 34.95
+    },
+    {
+      "date": "2025-07-11",
+      "AI_Robot": 12.35,
+      "Quantum": 25.98,
+      "Semi": 14.74,
+      "Bio": 0.61,
+      "Fusion": 23.54,
+      "Space": 34.16
+    },
+    {
+      "date": "2025-07-14",
+      "AI_Robot": 9.52,
+      "Quantum": 24.47,
+      "Semi": 13.55,
+      "Bio": 0.33,
+      "Fusion": 22.91,
+      "Space": 35.01
+    },
+    {
+      "date": "2025-07-15",
+      "AI_Robot": 7.98,
+      "Quantum": 23.88,
+      "Semi": 16.67,
+      "Bio": 0.1,
+      "Fusion": 24.88,
+      "Space": 31.57
+    },
+    {
+      "date": "2025-07-16",
+      "AI_Robot": 9.2,
+      "Quantum": 22.53,
+      "Semi": 15.03,
+      "Bio": 0.66,
+      "Fusion": 24.9,
+      "Space": 32.36
+    },
+    {
+      "date": "2025-07-17",
+      "AI_Robot": 9.71,
+      "Quantum": 24.21,
+      "Semi": 14.96,
+      "Bio": 2.21,
+      "Fusion": 25.48,
+      "Space": 34.92
+    },
+    {
+      "date": "2025-07-18",
+      "AI_Robot": 9.14,
+      "Quantum": 23.55,
+      "Semi": 12.76,
+      "Bio": 1.36,
+      "Fusion": 26.05,
+      "Space": 33.83
+    },
+    {
+      "date": "2025-07-22",
+      "AI_Robot": 10.14,
+      "Quantum": 23.17,
+      "Semi": 12.92,
+      "Bio": 0.14,
+      "Fusion": 28.92,
+      "Space": 35.42
+    },
+    {
+      "date": "2025-07-23",
+      "AI_Robot": 14.54,
+      "Quantum": 25.19,
+      "Semi": 14.56,
+      "Bio": 3.14,
+      "Fusion": 32.1,
+      "Space": 39.92
+    },
+    {
+      "date": "2025-07-24",
+      "AI_Robot": 15.5,
+      "Quantum": 27.12,
+      "Semi": 14.52,
+      "Bio": 4.74,
+      "Fusion": 34.25,
+      "Space": 42.41
+    },
+    {
+      "date": "2025-07-25",
+      "AI_Robot": 13.75,
+      "Quantum": 27.18,
+      "Semi": 13.7,
+      "Bio": 5.08,
+      "Fusion": 34.4,
+      "Space": 40.82
+    },
+    {
+      "date": "2025-07-28",
+      "AI_Robot": 14.45,
+      "Quantum": 26.62,
+      "Semi": 11.14,
+      "Bio": 4.19,
+      "Fusion": 33.67,
+      "Space": 39.55
+    },
+    {
+      "date": "2025-07-29",
+      "AI_Robot": 12.18,
+      "Quantum": 25.61,
+      "Semi": 8.49,
+      "Bio": 5.17,
+      "Fusion": 33.53,
+      "Space": 32.92
+    },
+    {
+      "date": "2025-07-30",
+      "AI_Robot": 12.28,
+      "Quantum": 27.51,
+      "Semi": 8.74,
+      "Bio": 4.81,
+      "Fusion": 37.71,
+      "Space": 35.7
+    },
+    {
+      "date": "2025-07-31",
+      "AI_Robot": 14.13,
+      "Quantum": 29.92,
+      "Semi": 12.53,
+      "Bio": 4.31,
+      "Fusion": 42.22,
+      "Space": 35.06
+    },
+    {
+      "date": "2025-08-01",
+      "AI_Robot": 14.11,
+      "Quantum": 30.33,
+      "Semi": 6.4,
+      "Bio": 5.15,
+      "Fusion": 42.46,
+      "Space": 36.54
+    },
+    {
+      "date": "2025-08-04",
+      "AI_Robot": 13.23,
+      "Quantum": 28.47,
+      "Semi": 5.0,
+      "Bio": 4.71,
+      "Fusion": 41.39,
+      "Space": 35.11
+    },
+    {
+      "date": "2025-08-05",
+      "AI_Robot": 14.37,
+      "Quantum": 29.42,
+      "Semi": 5.23,
+      "Bio": 7.31,
+      "Fusion": 45.61,
+      "Space": 36.6
+    },
+    {
+      "date": "2025-08-06",
+      "AI_Robot": 13.17,
+      "Quantum": 29.92,
+      "Semi": 3.05,
+      "Bio": 7.55,
+      "Fusion": 47.24,
+      "Space": 36.85
+    },
+    {
+      "date": "2025-08-07",
+      "AI_Robot": 13.82,
+      "Quantum": 31.15,
+      "Semi": 2.35,
+      "Bio": 9.75,
+      "Fusion": 47.62,
+      "Space": 36.22
+    },
+    {
+      "date": "2025-08-08",
+      "AI_Robot": 14.84,
+      "Quantum": 30.48,
+      "Semi": 3.65,
+      "Bio": 8.15,
+      "Fusion": 43.48,
+      "Space": 36.18
+    },
+    {
+      "date": "2025-08-12",
+      "AI_Robot": 15.13,
+      "Quantum": 31.11,
+      "Semi": 7.0,
+      "Bio": 7.74,
+      "Fusion": 43.5,
+      "Space": 36.71
+    },
+    {
+      "date": "2025-08-13",
+      "AI_Robot": 16.24,
+      "Quantum": 31.15,
+      "Semi": 5.9,
+      "Bio": 8.97,
+      "Fusion": 44.89,
+      "Space": 33.17
+    },
+    {
+      "date": "2025-08-14",
+      "AI_Robot": 20.67,
+      "Quantum": 30.05,
+      "Semi": 3.45,
+      "Bio": 8.26,
+      "Fusion": 43.19,
+      "Space": 32.07
+    },
+    {
+      "date": "2025-08-15",
+      "AI_Robot": 20.77,
+      "Quantum": 31.91,
+      "Semi": 5.41,
+      "Bio": 9.15,
+      "Fusion": 46.3,
+      "Space": 33.79
+    },
+    {
+      "date": "2025-08-18",
+      "AI_Robot": 22.14,
+      "Quantum": 33.87,
+      "Semi": 3.82,
+      "Bio": 8.6,
+      "Fusion": 48.46,
+      "Space": 37.41
+    },
+    {
+      "date": "2025-08-19",
+      "AI_Robot": 25.85,
+      "Quantum": 33.77,
+      "Semi": 5.15,
+      "Bio": 9.84,
+      "Fusion": 46.5,
+      "Space": 33.15
+    },
+    {
+      "date": "2025-08-20",
+      "AI_Robot": 21.23,
+      "Quantum": 31.75,
+      "Semi": 1.68,
+      "Bio": 8.46,
+      "Fusion": 41.53,
+      "Space": 31.29
+    },
+    {
+      "date": "2025-08-21",
+      "AI_Robot": 21.5,
+      "Quantum": 30.89,
+      "Semi": 1.02,
+      "Bio": 6.12,
+      "Fusion": 41.24,
+      "Space": 30.69
+    },
+    {
+      "date": "2025-08-22",
+      "AI_Robot": 21.45,
+      "Quantum": 31.71,
+      "Semi": 0.4,
+      "Bio": 6.98,
+      "Fusion": 42.07,
+      "Space": 27.53
+    },
+    {
+      "date": "2025-08-25",
+      "AI_Robot": 23.44,
+      "Quantum": 32.5,
+      "Semi": 3.13,
+      "Bio": 5.47,
+      "Fusion": 43.42,
+      "Space": 27.6
+    },
+    {
+      "date": "2025-08-26",
+      "AI_Robot": 23.55,
+      "Quantum": 32.28,
+      "Semi": 3.54,
+      "Bio": 3.53,
+      "Fusion": 42.23,
+      "Space": 29.65
+    },
+    {
+      "date": "2025-08-27",
+      "AI_Robot": 22.53,
+      "Quantum": 31.72,
+      "Semi": 4.45,
+      "Bio": 3.08,
+      "Fusion": 42.29,
+      "Space": 29.24
+    },
+    {
+      "date": "2025-08-28",
+      "AI_Robot": 24.36,
+      "Quantum": 30.94,
+      "Semi": 5.86,
+      "Bio": 3.18,
+      "Fusion": 43.6,
+      "Space": 29.78
+    },
+    {
+      "date": "2025-08-29",
+      "AI_Robot": 26.28,
+      "Quantum": 31.33,
+      "Semi": 5.41,
+      "Bio": 3.14,
+      "Fusion": 46.82,
+      "Space": 28.78
+    },
+    {
+      "date": "2025-09-01",
+      "AI_Robot": 25.23,
+      "Quantum": 29.83,
+      "Semi": -1.28,
+      "Bio": 4.98,
+      "Fusion": 44.68,
+      "Space": 26.77
+    },
+    {
+      "date": "2025-09-02",
+      "AI_Robot": 22.66,
+      "Quantum": 28.6,
+      "Semi": -2.2,
+      "Bio": 6.55,
+      "Fusion": 45.32,
+      "Space": 27.48
+    },
+    {
+      "date": "2025-09-03",
+      "AI_Robot": 20.99,
+      "Quantum": 26.32,
+      "Semi": -3.66,
+      "Bio": 5.21,
+      "Fusion": 43.61,
+      "Space": 23.4
+    },
+    {
+      "date": "2025-09-04",
+      "AI_Robot": 22.34,
+      "Quantum": 26.92,
+      "Semi": -2.65,
+      "Bio": 6.12,
+      "Fusion": 46.29,
+      "Space": 22.91
+    },
+    {
+      "date": "2025-09-05",
+      "AI_Robot": 23.14,
+      "Quantum": 28.3,
+      "Semi": -0.65,
+      "Bio": 7.34,
+      "Fusion": 49.74,
+      "Space": 25.0
+    },
+    {
+      "date": "2025-09-08",
+      "AI_Robot": 26.3,
+      "Quantum": 30.29,
+      "Semi": 0.83,
+      "Bio": 8.86,
+      "Fusion": 56.01,
+      "Space": 26.26
+    },
+    {
+      "date": "2025-09-09",
+      "AI_Robot": 25.56,
+      "Quantum": 29.8,
+      "Semi": 2.07,
+      "Bio": 8.26,
+      "Fusion": 52.93,
+      "Space": 24.93
+    },
+    {
+      "date": "2025-09-10",
+      "AI_Robot": 27.59,
+      "Quantum": 31.85,
+      "Semi": 4.03,
+      "Bio": 7.16,
+      "Fusion": 55.87,
+      "Space": 28.38
+    },
+    {
+      "date": "2025-09-11",
+      "AI_Robot": 30.62,
+      "Quantum": 32.02,
+      "Semi": 7.56,
+      "Bio": 5.82,
+      "Fusion": 57.1,
+      "Space": 28.12
+    },
+    {
+      "date": "2025-09-12",
+      "AI_Robot": 30.47,
+      "Quantum": 32.85,
+      "Semi": 8.91,
+      "Bio": 6.2,
+      "Fusion": 55.1,
+      "Space": 29.01
+    },
+    {
+      "date": "2025-09-16",
+      "AI_Robot": 30.08,
+      "Quantum": 34.03,
+      "Semi": 12.61,
+      "Bio": 5.1,
+      "Fusion": 59.12,
+      "Space": 31.5
+    },
+    {
+      "date": "2025-09-17",
+      "AI_Robot": 28.4,
+      "Quantum": 32.45,
+      "Semi": 12.11,
+      "Bio": 5.23,
+      "Fusion": 53.86,
+      "Space": 28.82
+    },
+    {
+      "date": "2025-09-18",
+      "AI_Robot": 30.13,
+      "Quantum": 35.21,
+      "Semi": 17.72,
+      "Bio": 4.77,
+      "Fusion": 58.23,
+      "Space": 27.89
+    },
+    {
+      "date": "2025-09-19",
+      "AI_Robot": 29.07,
+      "Quantum": 36.69,
+      "Semi": 22.39,
+      "Bio": 8.48,
+      "Fusion": 64.15,
+      "Space": 29.45
+    },
+    {
+      "date": "2025-09-22",
+      "AI_Robot": 28.56,
+      "Quantum": 39.86,
+      "Semi": 27.28,
+      "Bio": 9.94,
+      "Fusion": 65.56,
+      "Space": 27.89
+    },
+    {
+      "date": "2025-09-24",
+      "AI_Robot": 27.09,
+      "Quantum": 39.35,
+      "Semi": 28.18,
+      "Bio": 8.73,
+      "Fusion": 65.49,
+      "Space": 28.51
+    },
+    {
+      "date": "2025-09-25",
+      "AI_Robot": 28.17,
+      "Quantum": 37.97,
+      "Semi": 28.21,
+      "Bio": 5.62,
+      "Fusion": 61.75,
+      "Space": 26.81
+    },
+    {
+      "date": "2025-09-26",
+      "AI_Robot": 28.55,
+      "Quantum": 37.3,
+      "Semi": 21.67,
+      "Bio": 3.86,
+      "Fusion": 61.69,
+      "Space": 27.11
+    },
+    {
+      "date": "2025-09-29",
+      "AI_Robot": 30.93,
+      "Quantum": 34.88,
+      "Semi": 23.88,
+      "Bio": 4.6,
+      "Fusion": 64.27,
+      "Space": 27.69
+    },
+    {
+      "date": "2025-09-30",
+      "AI_Robot": 30.55,
+      "Quantum": 35.5,
+      "Semi": 23.51,
+      "Bio": 4.37,
+      "Fusion": 64.23,
+      "Space": 27.26
+    },
+    {
+      "date": "2025-10-01",
+      "AI_Robot": 26.77,
+      "Quantum": 31.77,
+      "Semi": 21.0,
+      "Bio": 3.94,
+      "Fusion": 58.83,
+      "Space": 23.97
+    },
+    {
+      "date": "2025-10-02",
+      "AI_Robot": 27.38,
+      "Quantum": 30.46,
+      "Semi": 30.43,
+      "Bio": 10.38,
+      "Fusion": 56.48,
+      "Space": 22.53
+    },
+    {
+      "date": "2025-10-03",
+      "AI_Robot": 30.45,
+      "Quantum": 33.46,
+      "Semi": 31.19,
+      "Bio": 14.62,
+      "Fusion": 57.69,
+      "Space": 24.32
+    },
+    {
+      "date": "2025-10-06",
+      "AI_Robot": 35.72,
+      "Quantum": 41.46,
+      "Semi": 39.32,
+      "Bio": 17.02,
+      "Fusion": 71.93,
+      "Space": 36.75
+    },
+    {
+      "date": "2025-10-07",
+      "AI_Robot": 36.99,
+      "Quantum": 43.87,
+      "Semi": 36.77,
+      "Bio": 17.88,
+      "Fusion": 78.02,
+      "Space": 35.79
+    },
+    {
+      "date": "2025-10-08",
+      "AI_Robot": 36.15,
+      "Quantum": 43.2,
+      "Semi": 34.11,
+      "Bio": 18.94,
+      "Fusion": 88.31,
+      "Space": 37.15
+    },
+    {
+      "date": "2025-10-09",
+      "AI_Robot": 39.96,
+      "Quantum": 40.93,
+      "Semi": 36.92,
+      "Bio": 22.85,
+      "Fusion": 95.1,
+      "Space": 37.39
+    },
+    {
+      "date": "2025-10-10",
+      "AI_Robot": 39.05,
+      "Quantum": 37.04,
+      "Semi": 34.34,
+      "Bio": 21.81,
+      "Fusion": 88.15,
+      "Space": 32.24
+    },
+    {
+      "date": "2025-10-14",
+      "AI_Robot": 33.76,
+      "Quantum": 32.23,
+      "Semi": 30.01,
+      "Bio": 17.07,
+      "Fusion": 80.39,
+      "Space": 26.33
+    },
+    {
+      "date": "2025-10-15",
+      "AI_Robot": 37.1,
+      "Quantum": 34.87,
+      "Semi": 32.71,
+      "Bio": 19.02,
+      "Fusion": 90.73,
+      "Space": 31.79
+    },
+    {
+      "date": "2025-10-16",
+      "AI_Robot": 37.84,
+      "Quantum": 36.32,
+      "Semi": 34.72,
+      "Bio": 12.71,
+      "Fusion": 101.04,
+      "Space": 33.4
+    },
+    {
+      "date": "2025-10-17",
+      "AI_Robot": 34.27,
+      "Quantum": 33.44,
+      "Semi": 30.72,
+      "Bio": 8.31,
+      "Fusion": 97.26,
+      "Space": 30.83
+    },
+    {
+      "date": "2025-10-20",
+      "AI_Robot": 41.02,
+      "Quantum": 41.06,
+      "Semi": 35.91,
+      "Bio": 9.56,
+      "Fusion": 112.1,
+      "Space": 35.2
+    },
+    {
+      "date": "2025-10-21",
+      "AI_Robot": 40.38,
+      "Quantum": 37.44,
+      "Semi": 33.57,
+      "Bio": 10.43,
+      "Fusion": 98.66,
+      "Space": 31.43
+    },
+    {
+      "date": "2025-10-22",
+      "AI_Robot": 39.58,
+      "Quantum": 38.11,
+      "Semi": 32.26,
+      "Bio": 12.22,
+      "Fusion": 101.76,
+      "Space": 34.31
+    },
+    {
+      "date": "2025-10-23",
+      "AI_Robot": 36.58,
+      "Quantum": 38.45,
+      "Semi": 28.51,
+      "Bio": 10.0,
+      "Fusion": 102.85,
+      "Space": 35.46
+    },
+    {
+      "date": "2025-10-24",
+      "AI_Robot": 39.51,
+      "Quantum": 39.01,
+      "Semi": 34.09,
+      "Bio": 8.61,
+      "Fusion": 103.46,
+      "Space": 36.91
+    },
+    {
+      "date": "2025-10-27",
+      "AI_Robot": 43.2,
+      "Quantum": 41.34,
+      "Semi": 36.85,
+      "Bio": 10.22,
+      "Fusion": 108.52,
+      "Space": 40.77
+    },
+    {
+      "date": "2025-10-28",
+      "AI_Robot": 42.65,
+      "Quantum": 38.73,
+      "Semi": 35.54,
+      "Bio": 9.49,
+      "Fusion": 104.01,
+      "Space": 35.7
+    },
+    {
+      "date": "2025-10-29",
+      "AI_Robot": 46.2,
+      "Quantum": 38.32,
+      "Semi": 44.8,
+      "Bio": 6.59,
+      "Fusion": 99.91,
+      "Space": 33.46
+    },
+    {
+      "date": "2025-10-30",
+      "AI_Robot": 45.24,
+      "Quantum": 41.97,
+      "Semi": 48.84,
+      "Bio": 8.88,
+      "Fusion": 106.4,
+      "Space": 37.02
+    },
+    {
+      "date": "2025-10-31",
+      "AI_Robot": 49.97,
+      "Quantum": 43.92,
+      "Semi": 52.93,
+      "Bio": 8.56,
+      "Fusion": 106.78,
+      "Space": 36.73
+    },
+    {
+      "date": "2025-11-04",
+      "AI_Robot": 46.92,
+      "Quantum": 43.69,
+      "Semi": 52.93,
+      "Bio": 9.22,
+      "Fusion": 108.31,
+      "Space": 36.55
+    },
+    {
+      "date": "2025-11-05",
+      "AI_Robot": 44.12,
+      "Quantum": 40.98,
+      "Semi": 43.74,
+      "Bio": 8.2,
+      "Fusion": 105.83,
+      "Space": 35.87
+    },
+    {
+      "date": "2025-11-06",
+      "AI_Robot": 43.52,
+      "Quantum": 41.25,
+      "Semi": 48.46,
+      "Bio": 8.12,
+      "Fusion": 104.09,
+      "Space": 39.71
+    },
+    {
+      "date": "2025-11-07",
+      "AI_Robot": 40.98,
+      "Quantum": 40.25,
+      "Semi": 43.65,
+      "Bio": 6.08,
+      "Fusion": 95.6,
+      "Space": 38.14
+    },
+    {
+      "date": "2025-11-10",
+      "AI_Robot": 40.91,
+      "Quantum": 41.76,
+      "Semi": 49.66,
+      "Bio": 6.23,
+      "Fusion": 93.11,
+      "Space": 38.0
+    },
+    {
+      "date": "2025-11-11",
+      "AI_Robot": 40.7,
+      "Quantum": 42.82,
+      "Semi": 46.67,
+      "Bio": 6.8,
+      "Fusion": 95.46,
+      "Space": 35.19
+    },
+    {
+      "date": "2025-11-12",
+      "AI_Robot": 41.11,
+      "Quantum": 44.42,
+      "Semi": 42.46,
+      "Bio": 10.13,
+      "Fusion": 104.73,
+      "Space": 36.19
+    },
+    {
+      "date": "2025-11-13",
+      "AI_Robot": 41.23,
+      "Quantum": 43.91,
+      "Semi": 43.46,
+      "Bio": 10.79,
+      "Fusion": 105.9,
+      "Space": 35.72
+    },
+    {
+      "date": "2025-11-14",
+      "AI_Robot": 34.04,
+      "Quantum": 42.14,
+      "Semi": 37.41,
+      "Bio": 10.93,
+      "Fusion": 97.52,
+      "Space": 32.05
+    },
+    {
+      "date": "2025-11-17",
+      "AI_Robot": 24.7,
+      "Quantum": 41.8,
+      "Semi": 41.2,
+      "Bio": 10.2,
+      "Fusion": 99.65,
+      "Space": 35.2
+    },
+    {
+      "date": "2025-11-18",
+      "AI_Robot": 17.83,
+      "Quantum": 36.55,
+      "Semi": 33.71,
+      "Bio": 8.56,
+      "Fusion": 87.68,
+      "Space": 29.74
+    },
+    {
+      "date": "2025-11-19",
+      "AI_Robot": 17.09,
+      "Quantum": 36.53,
+      "Semi": 30.62,
+      "Bio": 8.08,
+      "Fusion": 86.79,
+      "Space": 29.37
+    },
+    {
+      "date": "2025-11-20",
+      "AI_Robot": 17.26,
+      "Quantum": 40.58,
+      "Semi": 39.14,
+      "Bio": 9.34,
+      "Fusion": 94.42,
+      "Space": 33.12
+    },
+    {
+      "date": "2025-11-21",
+      "AI_Robot": 15.12,
+      "Quantum": 38.64,
+      "Semi": 28.8,
+      "Bio": 8.95,
+      "Fusion": 84.16,
+      "Space": 29.42
+    },
+    {
+      "date": "2025-11-25",
+      "AI_Robot": 14.74,
+      "Quantum": 37.56,
+      "Semi": 29.61,
+      "Bio": 8.88,
+      "Fusion": 84.46,
+      "Space": 27.66
+    },
+    {
+      "date": "2025-11-26",
+      "AI_Robot": 17.78,
+      "Quantum": 38.97,
+      "Semi": 31.62,
+      "Bio": 11.67,
+      "Fusion": 93.6,
+      "Space": 30.69
+    },
+    {
+      "date": "2025-11-27",
+      "AI_Robot": 17.65,
+      "Quantum": 39.9,
+      "Semi": 36.11,
+      "Bio": 11.66,
+      "Fusion": 97.57,
+      "Space": 33.65
+    },
+    {
+      "date": "2025-11-28",
+      "AI_Robot": 18.8,
+      "Quantum": 40.26,
+      "Semi": 35.92,
+      "Bio": 11.97,
+      "Fusion": 99.24,
+      "Space": 34.78
+    }
+  ]
 }
