@@ -29,9 +29,6 @@ jobs:
       - name: Fetch stock data
         run: python scripts/fetch_stock_data.py
 
-      - name: Pull latest changes
-        run: git pull origin main --rebase
-
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
