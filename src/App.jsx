@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 // Stock Name Mapping (Ticker -> Japanese Name)
 const STOCK_NAMES = {
@@ -67,11 +67,6 @@ function App() {
         fetchData();
     }, []);
 
-    const chartData = Object.keys(data).map(key => ({
-        name: data[key].name,
-        Growth: data[key].change,
-    }));
-
     return (
         <div className="min-h-screen text-white p-4 md:p-8 font-sans selection:bg-blue-500 selection:text-white">
             <div className="max-w-7xl mx-auto space-y-8">
@@ -82,7 +77,7 @@ function App() {
                         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                             Japan Tech 6
                         </h1>
-                        <p className="text-gray-400 mt-2 font-medium">国家戦略6分野 リアルタイム株価トラッカー</p>
+                        <p className="text-gray-400 mt-2 font-medium">国家戦略6分野 株価トラッカー</p>
                     </div>
                     <div className="mt-4 md:mt-0 px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm text-sm text-gray-300">
                         最終更新: {new Date().toLocaleDateString()}
@@ -91,75 +86,75 @@ function App() {
 
                 {/* Main Bento Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {Object.entries(data).map(([key, info]) => (
-                        <button
-                            key={key}
-                            onClick={() => setSelectedSector(key)}
-                            className="group relative overflow-hidden rounded-3xl bg-gray-900/60 border border-white/5 p-8 text-left transition-all duration-300 hover:scale-[1.02] hover:bg-gray-800/80 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-white/10"
-                        >
-                            {/* Background Glow */}
-                            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/0 blur-3xl transition-all group-hover:from-blue-500/30" />
+                    {Object.entries(data).map(([key, info]) => {
+                        // Calculate change since Tax Cut News (3 days ago)
+                        const newsDate = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000);
+                        const newsDateStr = newsDate.toISOString().split('T')[0];
 
-                            <div className="relative z-10 flex flex-col h-full justify-between">
-                                <div className="flex justify-between items-start">
-                                    <div className="p-3 rounded-2xl bg-white/5 text-3xl backdrop-blur-md border border-white/5">
-                                        {key === 'AI_Robot' && '🤖'}
-                                        {key === 'Quantum' && '⚛️'}
-                                        {key === 'Semi' && '📱'}
-                                        {key === 'Bio' && '💊'}
-                                        {key === 'Fusion' && '☀️'}
-                                        {key === 'Space' && '🚀'}
+                        // Find closest data point to news date
+                        const newsDataPoint = historyData.find(d => d.date >= newsDateStr) || historyData[historyData.length - 1];
+                        const currentDataPoint = historyData[historyData.length - 1];
+
+                        let newsChange = 0;
+                        if (newsDataPoint && currentDataPoint) {
+                            const vNews = newsDataPoint[key] || 0;
+                            const vCurrent = currentDataPoint[key] || 0;
+                            // Formula: (V_current - V_news) / (100 + V_news) * 100
+                            newsChange = ((vCurrent - vNews) / (100 + vNews)) * 100;
+                        }
+
+                        const displayChange = newsChange.toFixed(2);
+
+                        return (
+                            <button
+                                key={key}
+                                onClick={() => setSelectedSector(key)}
+                                className="group relative overflow-hidden rounded-3xl bg-gray-900/60 border border-white/5 p-8 text-left transition-all duration-300 hover:scale-[1.02] hover:bg-gray-800/80 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-white/10"
+                            >
+                                {/* Background Glow */}
+                                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/0 blur-3xl transition-all group-hover:from-blue-500/30" />
+
+                                <div className="relative z-10 flex flex-col h-full justify-between">
+                                    <div className="flex justify-between items-start">
+                                        <div className="p-3 rounded-2xl bg-white/5 text-3xl backdrop-blur-md border border-white/5">
+                                            {key === 'AI_Robot' && '🤖'}
+                                            {key === 'Quantum' && '⚛️'}
+                                            {key === 'Semi' && '📱'}
+                                            {key === 'Bio' && '💊'}
+                                            {key === 'Fusion' && '☀️'}
+                                            {key === 'Space' && '🚀'}
+                                        </div>
+                                        <div className="text-right">
+                                            <div className={`text-3xl font-bold tracking-tighter ${Number(displayChange) > 0 ? 'text-red-400' : Number(displayChange) < 0 ? 'text-green-400' : 'text-gray-400'}`}>
+                                                {Number(displayChange) > 0 ? '+' : ''}{displayChange}%
+                                            </div>
+                                            <div className="text-xs text-gray-500 mt-1">減税報道比</div>
+                                        </div>
                                     </div>
-                                    <div className={`text-3xl font-bold tracking-tighter ${info.change > 0 ? 'text-red-400' : info.change < 0 ? 'text-green-400' : 'text-gray-400'}`}>
-                                        {info.change > 0 ? '+' : ''}{info.change}%
+
+                                    <div className="mt-8">
+                                        <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                                            {info.name}
+                                        </h3>
+                                        <p className="text-sm text-gray-500 mt-1">詳細を見る →</p>
                                     </div>
                                 </div>
-
-                                <div className="mt-8">
-                                    <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
-                                        {info.name}
-                                    </h3>
-                                    <p className="text-sm text-gray-500 mt-1">詳細を見る →</p>
-                                </div>
-                            </div>
-                        </button>
-                    ))}
+                            </button>
+                        );
+                    })}
                 </div>
 
                 {/* Charts Section (Bento Style) */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* Bar Chart Card */}
-                    <div className="rounded-3xl bg-gray-900/60 border border-white/5 p-8 backdrop-blur-sm">
-                        <h2 className="text-xl font-bold mb-6 text-gray-200 flex items-center gap-2">
-                            <span className="w-1 h-6 bg-blue-500 rounded-full" />
-                            セクター別 騰落率
-                        </h2>
-                        <div className="h-[300px] w-full">
-                            <ResponsiveContainer width="100%" height="100%">
-                                <BarChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                    <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
-                                    <XAxis dataKey="name" stroke="#666" fontSize={11} tickLine={false} axisLine={false} interval={0} angle={-45} textAnchor="end" height={60} />
-                                    <YAxis stroke="#666" fontSize={11} tickLine={false} axisLine={false} />
-                                    <Tooltip
-                                        cursor={{ fill: 'rgba(255,255,255,0.05)' }}
-                                        contentStyle={{ backgroundColor: '#111', borderColor: '#333', borderRadius: '12px', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-                                        itemStyle={{ color: '#fff' }}
-                                    />
-                                    <Bar dataKey="Growth" fill="#6366f1" radius={[4, 4, 0, 0]} />
-                                </BarChart>
-                            </ResponsiveContainer>
-                        </div>
-                    </div>
-
+                <div className="grid grid-cols-1 gap-6">
                     {/* Line Chart Card */}
                     <div className="rounded-3xl bg-gray-900/60 border border-white/5 p-8 backdrop-blur-sm">
                         <h2 className="text-xl font-bold mb-6 text-gray-200 flex items-center gap-2">
                             <span className="w-1 h-6 bg-purple-500 rounded-full" />
                             年間トレンド
                         </h2>
-                        <div className="h-[300px] w-full">
+                        <div className="h-[400px] w-full">
                             <ResponsiveContainer width="100%" height="100%">
-                                <LineChart data={historyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                <LineChart data={historyData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                                     <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                                     <XAxis
                                         dataKey="date"
@@ -180,7 +175,7 @@ function App() {
                                         labelFormatter={(label) => new Date(label).toLocaleDateString()}
                                     />
                                     <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
-                                    <ReferenceLine x={new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]} stroke="#ef4444" strokeDasharray="3 3" label={{ value: '減税報道', fill: '#ef4444', fontSize: 10 }} />
+                                    <ReferenceLine x={new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]} stroke="#ef4444" strokeDasharray="3 3" label={{ value: '減税報道', fill: '#ef4444', fontSize: 12, position: 'top' }} />
 
                                     <Line type="monotone" dataKey="AI_Robot" stroke="#3b82f6" strokeWidth={2} dot={false} name="AI" />
                                     <Line type="monotone" dataKey="Quantum" stroke="#8b5cf6" strokeWidth={2} dot={false} name="量子" />
