@@ -187,7 +187,7 @@ function App() {
                                     <Line type="monotone" dataKey="Semi" stroke="#10b981" strokeWidth={2} dot={false} name="半導体" />
                                     <Line type="monotone" dataKey="Bio" stroke="#ec4899" strokeWidth={2} dot={false} name="バイオ" />
                                     <Line type="monotone" dataKey="Fusion" stroke="#f59e0b" strokeWidth={2} dot={false} name="核融合" />
-                                    <Line type="monotone" dataKey="Space" stroke="#6366f1" strokeWidth={2} dot={false} name="宇宙" />
+                                    <Line type="monotone" dataKey="Space" stroke="#9ca3af" strokeWidth={2} dot={false} name="宇宙" />
                                 </LineChart>
                             </ResponsiveContainer>
                         </div>
