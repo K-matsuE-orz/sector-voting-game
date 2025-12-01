@@ -41,9 +41,10 @@ function App() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Try production path first, then local
-                let res = await fetch('/six-national-strategic/stock_data.json');
-                if (!res.ok) res = await fetch('/stock_data.json');
+                // Try production path first, then local, with cache busting
+                const timestamp = Date.now();
+                let res = await fetch(`/six-national-strategic/stock_data.json?t=${timestamp}`);
+                if (!res.ok) res = await fetch(`/stock_data.json?t=${timestamp}`);
 
                 const json = await res.json();
                 if (json.sectors) {
