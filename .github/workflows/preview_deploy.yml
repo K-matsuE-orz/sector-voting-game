@@ -1,0 +1,40 @@
+name: Preview Deployment
+
+on:
+  push:
+    branches:
+      - New-IDEA
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout New-IDEA branch
+        uses: actions/checkout@v4
+        with:
+          ref: New-IDEA
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with preview base path
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /six-national-strategic/preview/
+
+      - name: Deploy to gh-pages preview directory
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_dir: preview
+          keep_files: true  # Keep other files in gh-pages (like the main site)
