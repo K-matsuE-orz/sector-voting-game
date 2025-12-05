@@ -7,10 +7,8 @@ on:
   workflow_dispatch: # Allow manual trigger
 
 jobs:
-  deploy-preview:
+  build-preview:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     
     steps:
       - name: Checkout New-IDEA branch
@@ -31,10 +29,55 @@ jobs:
         env:
           VITE_BASE_PATH: /six-national-strategic/preview/
 
-      - name: Deploy to gh-pages preview directory
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          destination_dir: preview
-          keep_files: true  # Keep other files in gh-pages (like the main site)
+          name: preview-build
+          path: ./dist
+
+  # Merge preview into main site and deploy
+  deploy-combined:
+    needs: build-preview
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}preview/
+
+    steps:
+      - name: Checkout main branch (for production build)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Download preview artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: preview-build
+          path: ./dist/preview
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload combined artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
