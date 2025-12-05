@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useRef, Suspense, useMemo } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Text, Float, Stars, OrbitControls, MeshDistortMaterial, Sphere, Box, RoundedBox } from '@react-three/drei';
-import * as THREE from 'three';
+import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 // Stock Name Mapping
@@ -20,203 +17,114 @@ const STOCK_NAMES = {
     "9348.T": "ispace", "464A.T": "QPSホールディングス", "186A.T": "アストロスケール", "290A.T": "Synspective", "402A.T": "アクセルスペース"
 };
 
-const INITIAL_DATA = {
-    "AI_Robot": { name: "AI・ロボット", change: 0, tickers: [], color: "#00ffff", icon: "🤖" },
-    "Quantum": { name: "量子技術", change: 0, tickers: [], color: "#ff00ff", icon: "⚛️" },
-    "Semi": { name: "半導体・通信", change: 0, tickers: [], color: "#00ff00", icon: "📱" },
-    "Bio": { name: "バイオ・ヘルスケア", change: 0, tickers: [], color: "#ff00aa", icon: "💊" },
-    "Fusion": { name: "核融合", change: 0, tickers: [], color: "#ffaa00", icon: "☀️" },
-    "Space": { name: "宇宙", change: 0, tickers: [], color: "#ffffff", icon: "🚀" }
+const SECTORS = {
+    "AI_Robot": { name: "AI・ロボット", icon: "🤖", gradient: "from-cyan-500 via-blue-500 to-purple-600" },
+    "Quantum": { name: "量子技術", icon: "⚛️", gradient: "from-purple-500 via-pink-500 to-red-500" },
+    "Semi": { name: "半導体", icon: "💎", gradient: "from-green-400 via-emerald-500 to-teal-600" },
+    "Bio": { name: "バイオ", icon: "🧬", gradient: "from-pink-500 via-rose-500 to-red-600" },
+    "Fusion": { name: "核融合", icon: "☀️", gradient: "from-yellow-400 via-orange-500 to-red-600" },
+    "Space": { name: "宇宙", icon: "🚀", gradient: "from-indigo-500 via-purple-500 to-pink-500" }
 };
 
-// Animated Particles Background
-function ParticleField({ count = 500 }) {
-    const mesh = useRef();
-    const [positions] = useState(() => {
-        const pos = new Float32Array(count * 3);
-        for (let i = 0; i < count * 3; i += 3) {
-            pos[i] = (Math.random() - 0.5) * 50;
-            pos[i + 1] = (Math.random() - 0.5) * 50;
-            pos[i + 2] = (Math.random() - 0.5) * 50;
-        }
-        return pos;
-    });
+const INITIAL_DATA = Object.fromEntries(
+    Object.entries(SECTORS).map(([key, val]) => [key, { ...val, change: 0, tickers: [] }])
+);
 
-    useFrame((state) => {
-        if (mesh.current) {
-            mesh.current.rotation.y = state.clock.elapsedTime * 0.02;
-            mesh.current.rotation.x = state.clock.elapsedTime * 0.01;
-        }
-    });
-
+// Particle Component
+function Particles() {
     return (
-        <points ref={mesh}>
-            <bufferGeometry>
-                <bufferAttribute
-                    attach="attributes-position"
-                    count={count}
-                    array={positions}
-                    itemSize={3}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {[...Array(50)].map((_, i) => (
+                <div
+                    key={i}
+                    className="particle"
+                    style={{
+                        left: `${Math.random() * 100}%`,
+                        animationDelay: `${Math.random() * 20}s`,
+                        animationDuration: `${15 + Math.random() * 20}s`,
+                    }}
                 />
-            </bufferGeometry>
-            <pointsMaterial size={0.08} color="#00ffff" transparent opacity={0.6} sizeAttenuation />
-        </points>
+            ))}
+        </div>
     );
 }
 
-// Floating 3D Sector Card
-function SectorCard({ position, sector, data, onClick, index }) {
-    const mesh = useRef();
-    const [hovered, setHovered] = useState(false);
-
-    useFrame((state) => {
-        if (mesh.current) {
-            mesh.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5 + index) * 0.1;
-            mesh.current.position.y = position[1] + Math.sin(state.clock.elapsedTime + index * 0.5) * 0.15;
-        }
-    });
-
-    const isPositive = data.change > 0;
-
+// Animated Background Grid
+function GridBackground() {
     return (
-        <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
-            <group
-                ref={mesh}
-                position={position}
-                onClick={onClick}
-                onPointerOver={() => setHovered(true)}
-                onPointerOut={() => setHovered(false)}
-            >
-                <RoundedBox args={[2.5, 1.8, 0.1]} radius={0.1} smoothness={4}>
-                    <meshPhysicalMaterial
-                        color={hovered ? data.color : "#111111"}
-                        metalness={0.9}
-                        roughness={0.1}
-                        transparent
-                        opacity={0.9}
-                        envMapIntensity={1}
-                    />
-                </RoundedBox>
-
-                {/* Glow effect */}
-                <RoundedBox args={[2.6, 1.9, 0.05]} radius={0.1} position={[0, 0, -0.1]}>
-                    <meshBasicMaterial color={data.color} transparent opacity={hovered ? 0.4 : 0.1} />
-                </RoundedBox>
-
-                {/* Sector Name */}
-                <Text
-                    position={[0, 0.4, 0.1]}
-                    fontSize={0.2}
-                    color="#ffffff"
-                    anchorX="center"
-                    anchorY="middle"
-                    font="/fonts/NotoSansJP-Bold.otf"
-                >
-                    {data.name || sector}
-                </Text>
-
-                {/* Change Percentage */}
-                <Text
-                    position={[0, -0.2, 0.1]}
-                    fontSize={0.4}
-                    color={isPositive ? "#ff4444" : "#44ff44"}
-                    anchorX="center"
-                    anchorY="middle"
-                >
-                    {isPositive ? "+" : ""}{data.change?.toFixed(2) || "0.00"}%
-                </Text>
-            </group>
-        </Float>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="grid-bg" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+        </div>
     );
 }
 
-// Central Rotating Sphere
-function CentralSphere() {
-    const mesh = useRef();
-
-    useFrame((state) => {
-        if (mesh.current) {
-            mesh.current.rotation.y = state.clock.elapsedTime * 0.2;
-            mesh.current.rotation.x = state.clock.elapsedTime * 0.1;
-        }
-    });
-
+// Glowing Orb
+function GlowingOrb() {
     return (
-        <Sphere ref={mesh} args={[1.5, 64, 64]} position={[0, 0, 0]}>
-            <MeshDistortMaterial
-                color="#0066ff"
-                attach="material"
-                distort={0.4}
-                speed={2}
-                roughness={0.2}
-                metalness={0.8}
-            />
-        </Sphere>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+            <div className="orb" />
+        </div>
     );
 }
 
-// 3D Scene Component
-function Scene({ data, historyData, onSectorClick }) {
-    const sectorKeys = Object.keys(data);
-    const radius = 5;
+// Sector Card Component
+function SectorCard({ sectorKey, data, historyData, onClick, index }) {
+    const sector = SECTORS[sectorKey];
 
-    // Compute sector change from historyData
-    const getSectorChange = (key) => {
-        if (!historyData || historyData.length < 2) return 0;
+    // Calculate change from history
+    const getChange = () => {
+        if (!historyData?.length) return 0;
         const newsDateStr = "2025-11-26";
         const newsDataPoint = historyData.find(d => d.date >= newsDateStr) || historyData[historyData.length - 1];
         const currentDataPoint = historyData[historyData.length - 1];
         if (newsDataPoint && currentDataPoint) {
-            const vNews = newsDataPoint[key] || 0;
-            const vCurrent = currentDataPoint[key] || 0;
+            const vNews = newsDataPoint[sectorKey] || 0;
+            const vCurrent = currentDataPoint[sectorKey] || 0;
             return ((vCurrent - vNews) / (100 + vNews)) * 100;
         }
         return 0;
     };
 
+    const change = getChange();
+    const isPositive = change > 0;
+
     return (
-        <>
-            <ambientLight intensity={0.3} />
-            <pointLight position={[10, 10, 10]} intensity={1} color="#00ffff" />
-            <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff00ff" />
-            <spotLight position={[0, 10, 0]} intensity={0.8} color="#ffffff" angle={0.5} />
+        <button
+            onClick={onClick}
+            className="sector-card group"
+            style={{ animationDelay: `${index * 100}ms` }}
+        >
+            {/* Glow effect */}
+            <div className={`absolute -inset-0.5 bg-gradient-to-r ${sector.gradient} rounded-2xl blur-lg opacity-0 group-hover:opacity-75 transition-all duration-500`} />
 
-            <Stars radius={100} depth={50} count={3000} factor={4} saturation={0} fade speed={1} />
-            <ParticleField count={300} />
+            {/* Card content */}
+            <div className="relative h-full bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-white/10 overflow-hidden">
+                {/* Background gradient animation */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${sector.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
-            <CentralSphere />
+                {/* Icon */}
+                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    {sector.icon}
+                </div>
 
-            {sectorKeys.map((key, index) => {
-                const angle = (index / sectorKeys.length) * Math.PI * 2;
-                const x = Math.cos(angle) * radius;
-                const z = Math.sin(angle) * radius;
-                const sectorData = {
-                    ...data[key],
-                    change: getSectorChange(key),
-                    color: INITIAL_DATA[key]?.color || "#ffffff"
-                };
+                {/* Name */}
+                <h3 className="text-xl font-bold text-white mb-2">{sector.name}</h3>
 
-                return (
-                    <SectorCard
-                        key={key}
-                        position={[x, 0, z]}
-                        sector={key}
-                        data={sectorData}
-                        onClick={() => onSectorClick(key)}
-                        index={index}
-                    />
-                );
-            })}
+                {/* Change */}
+                <div className={`text-3xl font-black ${isPositive ? 'text-red-400' : 'text-green-400'}`}>
+                    {isPositive ? '+' : ''}{change.toFixed(2)}%
+                </div>
 
-            <OrbitControls
-                enableZoom={true}
-                enablePan={false}
-                maxPolarAngle={Math.PI / 1.5}
-                minPolarAngle={Math.PI / 3}
-                autoRotate
-                autoRotateSpeed={0.5}
-            />
-        </>
+                {/* Subtitle */}
+                <p className="text-xs text-gray-500 mt-2">vs 税制改正ニュース</p>
+
+                {/* Hover arrow */}
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                    <span className="text-white text-xl">→</span>
+                </div>
+            </div>
+        </button>
     );
 }
 
@@ -235,8 +143,8 @@ function App() {
                 const timestamp = Date.now();
                 let res = await fetch(`/six-national-strategic/stock_data.json?t=${timestamp}`);
                 if (!res.ok) res = await fetch(`/stock_data.json?t=${timestamp}`);
-
                 const json = await res.json();
+
                 if (json.sectors) {
                     setData(prev => {
                         const newData = { ...prev };
@@ -251,7 +159,7 @@ function App() {
                 }
                 if (json.history) setHistoryData(json.history);
                 if (json.last_updated) {
-                    setLastUpdated(new Date(json.last_updated).toLocaleString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }));
+                    setLastUpdated(new Date(json.last_updated).toLocaleString('ja-JP'));
                 }
                 if (json.nikkei_current_price) setNikkeiPrice(json.nikkei_current_price);
             } catch (err) {
@@ -276,84 +184,101 @@ function App() {
 
     const filteredHistory = getFilteredHistory();
 
-    return (
-        <div className="w-full h-screen bg-black relative overflow-hidden">
-            {/* 3D Canvas */}
-            <Canvas
-                camera={{ position: [0, 5, 12], fov: 60 }}
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            >
-                <Suspense fallback={null}>
-                    <Scene
-                        data={data}
-                        historyData={historyData}
-                        onSectorClick={(key) => setSelectedSector(key)}
-                    />
-                </Suspense>
-            </Canvas>
+    // Calculate Nikkei change
+    const getNikkeiChange = () => {
+        if (!historyData.length) return 0;
+        const newsDateStr = "2025-11-26";
+        const newsDataPoint = historyData.find(d => d.date >= newsDateStr) || historyData[historyData.length - 1];
+        const currentDataPoint = historyData[historyData.length - 1];
+        if (newsDataPoint && currentDataPoint && newsDataPoint.Nikkei225 !== undefined) {
+            const vNews = newsDataPoint.Nikkei225;
+            const vCurrent = currentDataPoint.Nikkei225;
+            return ((vCurrent - vNews) / (100 + vNews)) * 100;
+        }
+        return 0;
+    };
 
-            {/* UI Overlay */}
-            <div className="absolute inset-0 pointer-events-none">
+    const nikkeiChange = getNikkeiChange();
+
+    return (
+        <div className="min-h-screen bg-black text-white overflow-x-hidden">
+            {/* Background Effects */}
+            <GridBackground />
+            <Particles />
+            <GlowingOrb />
+
+            {/* Main Content */}
+            <div className="relative z-10 max-w-7xl mx-auto px-4 py-8">
                 {/* Header */}
-                <header className="p-6 pointer-events-auto">
-                    <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 tracking-tight">
+                <header className="text-center mb-16 pt-8">
+                    <h1 className="title-gradient text-6xl md:text-8xl font-black tracking-tighter mb-4">
                         JAPAN TECH 6
                     </h1>
-                    <p className="text-cyan-400/60 mt-1 font-mono text-sm tracking-widest">NATIONAL STRATEGIC SECTORS</p>
+                    <p className="text-cyan-400/60 font-mono text-sm tracking-[0.3em] uppercase">
+                        National Strategic Sectors Dashboard
+                    </p>
 
+                    {/* Nikkei Badge */}
                     {nikkeiPrice && (
-                        <div className="mt-4 inline-flex items-center gap-3 px-4 py-2 bg-black/50 backdrop-blur-xl rounded-xl border border-white/10">
-                            <span className="text-red-500 font-bold">NIKKEI 225</span>
-                            <span className="text-white text-xl font-mono">¥{nikkeiPrice.toLocaleString()}</span>
+                        <div className="mt-8 inline-flex items-center gap-4 px-6 py-3 bg-white/5 backdrop-blur-xl rounded-full border border-white/10">
+                            <div className="flex items-center gap-2">
+                                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                                <span className="text-red-400 font-bold">NIKKEI 225</span>
+                            </div>
+                            <span className="text-2xl font-mono font-bold">¥{nikkeiPrice.toLocaleString()}</span>
+                            <span className={`text-lg font-bold ${nikkeiChange >= 0 ? 'text-red-400' : 'text-green-400'}`}>
+                                {nikkeiChange > 0 ? '+' : ''}{nikkeiChange.toFixed(2)}%
+                            </span>
                         </div>
                     )}
                 </header>
 
-                {/* Chart Toggle Button */}
-                <div className="absolute bottom-6 left-6 pointer-events-auto">
+                {/* Sector Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    {Object.keys(data).map((key, index) => (
+                        <SectorCard
+                            key={key}
+                            sectorKey={key}
+                            data={data[key]}
+                            historyData={historyData}
+                            onClick={() => setSelectedSector(key)}
+                            index={index}
+                        />
+                    ))}
+                </div>
+
+                {/* Chart Button */}
+                <div className="text-center mb-8">
                     <button
                         onClick={() => setShowChart(!showChart)}
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-bold text-white shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-105"
+                        className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-bold text-lg shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300"
                     >
-                        {showChart ? '3D VIEW' : 'CHART VIEW'}
+                        {showChart ? '✕ チャートを閉じる' : '📊 トレンドチャートを見る'}
                     </button>
                 </div>
 
-                {/* Last Updated */}
-                <div className="absolute bottom-6 right-6 text-white/40 text-xs font-mono pointer-events-auto">
-                    Last Updated: {lastUpdated}
-                </div>
-            </div>
-
-            {/* Chart Overlay */}
-            {showChart && (
-                <div className="absolute inset-0 bg-black/90 backdrop-blur-xl z-50 p-8 overflow-auto">
-                    <div className="max-w-6xl mx-auto">
+                {/* Chart */}
+                {showChart && (
+                    <div className="glass-panel p-6 rounded-3xl mb-12 animate-fade-in">
                         <div className="flex justify-between items-center mb-6">
-                            <h2 className="text-3xl font-bold text-white">MARKET TREND</h2>
+                            <h2 className="text-2xl font-bold">マーケットトレンド</h2>
                             <div className="flex gap-2">
                                 {['1M', '6M', 'YTD', 'ALL'].map((range) => (
                                     <button
                                         key={range}
                                         onClick={() => setTimeRange(range)}
-                                        className={`px-4 py-2 font-bold rounded-lg transition-all ${timeRange === range
-                                                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
+                                        className={`px-4 py-2 rounded-lg font-bold transition-all ${timeRange === range
+                                                ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                                                 : 'bg-white/10 text-white/60 hover:bg-white/20'
                                             }`}
                                     >
                                         {range}
                                     </button>
                                 ))}
-                                <button
-                                    onClick={() => setShowChart(false)}
-                                    className="ml-4 px-4 py-2 bg-red-500/20 text-red-400 rounded-lg hover:bg-red-500/30"
-                                >
-                                    CLOSE
-                                </button>
                             </div>
                         </div>
 
-                        <div className="h-[500px] bg-white/5 rounded-2xl p-6 border border-white/10">
+                        <div className="h-[400px]">
                             <ResponsiveContainer width="100%" height="100%">
                                 <LineChart data={filteredHistory}>
                                     <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
@@ -372,78 +297,89 @@ function App() {
                                         itemStyle={{ color: '#fff' }}
                                     />
                                     <Legend />
-                                    <ReferenceLine x="2024-11-26" stroke="#ff00ff" strokeDasharray="3 3" />
+                                    <ReferenceLine x="2024-11-26" stroke="#ff00ff" strokeDasharray="3 3" label={{ value: "税制改正", fill: '#ff00ff', fontSize: 10 }} />
 
-                                    <Line type="monotone" dataKey="Nikkei225" stroke="#ff0000" strokeWidth={2} dot={false} name="日経225" />
-                                    <Line type="monotone" dataKey="AI_Robot" stroke="#00ffff" strokeWidth={2} dot={false} name="AI・ロボット" />
-                                    <Line type="monotone" dataKey="Semi" stroke="#00ff00" strokeWidth={2} dot={false} name="半導体" />
+                                    <Line type="monotone" dataKey="Nikkei225" stroke="#ff4444" strokeWidth={2} dot={false} name="日経225" />
+                                    <Line type="monotone" dataKey="AI_Robot" stroke="#00d4ff" strokeWidth={2} dot={false} name="AI・ロボット" />
+                                    <Line type="monotone" dataKey="Semi" stroke="#00ff88" strokeWidth={2} dot={false} name="半導体" />
                                     <Line type="monotone" dataKey="Bio" stroke="#ff00aa" strokeWidth={2} dot={false} name="バイオ" />
-                                    <Line type="monotone" dataKey="Quantum" stroke="#ff00ff" strokeWidth={2} dot={false} name="量子" />
+                                    <Line type="monotone" dataKey="Quantum" stroke="#aa00ff" strokeWidth={2} dot={false} name="量子" />
                                     <Line type="monotone" dataKey="Fusion" stroke="#ffaa00" strokeWidth={2} dot={false} name="核融合" />
                                     <Line type="monotone" dataKey="Space" stroke="#ffffff" strokeWidth={2} dot={false} name="宇宙" />
                                 </LineChart>
                             </ResponsiveContainer>
                         </div>
                     </div>
-                </div>
-            )}
+                )}
+
+                {/* Footer */}
+                <footer className="text-center text-gray-500 text-sm">
+                    Last Updated: {lastUpdated}
+                </footer>
+            </div>
 
             {/* Sector Detail Modal */}
             {selectedSector && (
-                <div className="absolute inset-0 z-50 flex items-center justify-center p-4">
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
                     <div className="absolute inset-0 bg-black/80 backdrop-blur-xl" onClick={() => setSelectedSector(null)} />
-                    <div className="relative w-full max-w-3xl max-h-[80vh] overflow-y-auto bg-gradient-to-br from-gray-900 to-black rounded-3xl border border-white/20 shadow-2xl">
-                        <div className="p-8">
-                            <div className="flex justify-between items-start mb-8">
-                                <div>
-                                    <div className="text-5xl mb-2">{INITIAL_DATA[selectedSector]?.icon}</div>
-                                    <h2 className="text-3xl font-black text-white">{data[selectedSector]?.name}</h2>
+                    <div className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-gray-900/95 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl animate-scale-in">
+                        {/* Modal Header */}
+                        <div className="sticky top-0 z-10 p-6 bg-gradient-to-b from-gray-900 to-transparent">
+                            <div className="flex justify-between items-start">
+                                <div className="flex items-center gap-4">
+                                    <span className="text-5xl">{SECTORS[selectedSector]?.icon}</span>
+                                    <div>
+                                        <h2 className="text-3xl font-black">{data[selectedSector]?.name}</h2>
+                                        <p className="text-gray-400">構成銘柄</p>
+                                    </div>
                                 </div>
                                 <button
                                     onClick={() => setSelectedSector(null)}
-                                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white"
+                                    className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                                 >
                                     ✕
                                 </button>
                             </div>
+                        </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {data[selectedSector]?.tickers?.map((stock) => {
-                                    const isObject = typeof stock === 'object';
-                                    const ticker = isObject ? stock.ticker : stock;
-                                    const change = isObject ? stock.change : null;
-                                    const price = isObject ? stock.price : null;
+                        {/* Stock List */}
+                        <div className="p-6 pt-0 grid grid-cols-1 md:grid-cols-2 gap-3">
+                            {data[selectedSector]?.tickers?.map((stock, i) => {
+                                const isObject = typeof stock === 'object';
+                                const ticker = isObject ? stock.ticker : stock;
+                                const change = isObject ? stock.change : null;
+                                const price = isObject ? stock.price : null;
 
-                                    return (
-                                        <a
-                                            key={ticker}
-                                            href={`https://finance.yahoo.co.jp/quote/${ticker}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex justify-between items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all border border-white/10 group"
-                                        >
-                                            <div>
-                                                <div className="font-bold text-white group-hover:text-cyan-400 transition-colors">
-                                                    {STOCK_NAMES[ticker] || ticker}
-                                                </div>
-                                                <div className="text-xs text-gray-500 font-mono">{ticker}</div>
+                                return (
+                                    <a
+                                        key={ticker}
+                                        href={`https://finance.yahoo.co.jp/quote/${ticker}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex justify-between items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all border border-transparent hover:border-white/20 group"
+                                        style={{ animationDelay: `${i * 50}ms` }}
+                                    >
+                                        <div>
+                                            <div className="font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                                {STOCK_NAMES[ticker] || ticker}
                                             </div>
-                                            <div className="text-right">
-                                                {price !== null ? (
-                                                    <>
-                                                        <div className={`font-bold text-lg ${change > 0 ? 'text-red-400' : change < 0 ? 'text-green-400' : 'text-gray-400'}`}>
-                                                            {change > 0 ? '+' : ''}{change}%
-                                                        </div>
-                                                        <div className="text-xs text-gray-500">¥{price?.toLocaleString()}</div>
-                                                    </>
-                                                ) : (
-                                                    <div className="text-gray-600">---</div>
-                                                )}
-                                            </div>
-                                        </a>
-                                    );
-                                })}
-                            </div>
+                                            <div className="text-xs text-gray-500 font-mono">{ticker}</div>
+                                        </div>
+                                        <div className="text-right">
+                                            {price !== null ? (
+                                                <>
+                                                    <div className={`font-bold text-lg ${change > 0 ? 'text-red-400' : change < 0 ? 'text-green-400' : 'text-gray-400'}`}>
+                                                        {change > 0 ? '+' : ''}{change}%
+                                                    </div>
+                                                    <div className="text-xs text-gray-500">¥{price?.toLocaleString()}</div>
+                                                </>
+                                            ) : (
+                                                <div className="text-gray-600">---</div>
+                                            )}
+                                        </div>
+                                    </a>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
