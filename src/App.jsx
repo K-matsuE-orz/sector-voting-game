@@ -262,131 +262,169 @@ function App() {
                 </footer>
             </div>
 
-            {/* Modal Overlay (Bento Style) */}
+            {/* Modal Overlay (Enhanced with Effects) */}
             {selectedSector && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    {/* Backdrop with blur */}
                     <div
-                        className="absolute inset-0 bg-black/60 backdrop-blur-md transition-opacity"
+                        className="absolute inset-0 bg-black/70 backdrop-blur-xl transition-opacity"
                         onClick={() => setSelectedSector(null)}
                     />
-                    <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#111] rounded-[2rem] border border-white/10 shadow-2xl modal-enter">
-                        {/* Modal Header */}
-                        <div className="sticky top-0 z-10 flex justify-between items-center p-6 md:p-8 bg-[#111]/90 backdrop-blur-xl border-b border-white/5">
-                            <div className="flex items-center gap-4">
-                                <span className="text-4xl">
-                                    {selectedSector === 'AI_Robot' && '🤖'}
-                                    {selectedSector === 'Quantum' && '⚛️'}
-                                    {selectedSector === 'Semi' && '📱'}
-                                    {selectedSector === 'Bio' && '💊'}
-                                    {selectedSector === 'Fusion' && '☀️'}
-                                    {selectedSector === 'Space' && '🚀'}
-                                </span>
-                                <div>
-                                    <h2 className="text-2xl md:text-3xl font-bold text-white">{data[selectedSector].name}</h2>
-                                    <p className="text-gray-400 text-sm">構成銘柄一覧</p>
-                                </div>
-                            </div>
-                            <button
-                                onClick={() => setSelectedSector(null)}
-                                className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-gray-400 hover:text-white"
-                            >
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                            </button>
-                        </div>
 
-                        {/* Modal Content */}
-                        <div className="p-6 md:p-8 space-y-8">
-                            {/* Large Cap Section */}
-                            <div>
-                                <h3 className="text-sm font-bold text-blue-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                                    大型株 (Large Cap)
-                                </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    {data[selectedSector].tickers.slice(0, 5).map((stock, i) => {
-                                        const isObject = typeof stock === 'object' && stock !== null;
-                                        const ticker = isObject ? stock.ticker : stock;
-                                        const change = isObject ? stock.change : null;
-                                        const price = isObject ? stock.price : null;
+                    {/* Modal Container */}
+                    <div className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-[2rem] border border-white/20 shadow-2xl modal-enter">
+                        {/* Modal Background Effects */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-[#0a0a15] to-gray-900" />
 
-                                        return (
-                                            <a
-                                                key={ticker}
-                                                href={`https://finance.yahoo.co.jp/quote/${ticker}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="stock-item flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all hover:scale-[1.01] group border border-white/5"
-                                                style={{ animationDelay: `${i * 50}ms` }}
-                                            >
-                                                <div>
-                                                    <div className="font-bold text-lg text-gray-200 group-hover:text-blue-300 transition-colors flex items-center gap-2">
-                                                        {STOCK_NAMES[ticker] || ticker}
-                                                        <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                                                    </div>
-                                                    <div className="text-xs text-gray-500 font-mono">{ticker}</div>
-                                                </div>
-                                                <div className="text-right">
-                                                    {price !== null ? (
-                                                        <>
-                                                            <div className={`font-bold text-lg ${change > 0 ? 'text-red-400' : change < 0 ? 'text-green-400' : 'text-gray-400'}`}>
-                                                                {change > 0 ? '+' : ''}{change}%
-                                                            </div>
-                                                            <div className="text-xs text-gray-500">¥{price.toLocaleString()}</div>
-                                                        </>
-                                                    ) : (
-                                                        <div className="text-gray-600 text-xs">---</div>
-                                                    )}
-                                                </div>
-                                            </a>
-                                        );
-                                    })}
+                        {/* Modal Orbs */}
+                        <div className="absolute -top-32 -right-32 w-64 h-64 bg-blue-500/30 rounded-full blur-[80px] animate-pulse" />
+                        <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-purple-500/30 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '1s' }} />
+
+                        {/* Grid overlay for modal */}
+                        <div className="absolute inset-0 opacity-30" style={{
+                            backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+                            backgroundSize: '40px 40px'
+                        }} />
+
+                        {/* Scrollable Content */}
+                        <div className="relative z-10 max-h-[90vh] overflow-y-auto">
+                            {/* Modal Header */}
+                            <div className="sticky top-0 z-20 flex justify-between items-center p-6 md:p-8 bg-gradient-to-b from-gray-900/95 via-gray-900/90 to-transparent backdrop-blur-xl">
+                                <div className="flex items-center gap-4">
+                                    <div className="relative">
+                                        <span className="text-5xl relative z-10">
+                                            {selectedSector === 'AI_Robot' && '🤖'}
+                                            {selectedSector === 'Quantum' && '⚛️'}
+                                            {selectedSector === 'Semi' && '📱'}
+                                            {selectedSector === 'Bio' && '💊'}
+                                            {selectedSector === 'Fusion' && '☀️'}
+                                            {selectedSector === 'Space' && '🚀'}
+                                        </span>
+                                        {/* Icon glow */}
+                                        <div className="absolute inset-0 blur-xl bg-blue-500/50 scale-150" />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+                                            {data[selectedSector].name}
+                                        </h2>
+                                        <p className="text-gray-400 text-sm mt-1">構成銘柄一覧 • 10銘柄</p>
+                                    </div>
                                 </div>
+                                <button
+                                    onClick={() => setSelectedSector(null)}
+                                    className="p-3 rounded-full bg-white/5 hover:bg-white/20 transition-all hover:scale-110 text-gray-400 hover:text-white border border-white/10"
+                                >
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                                </button>
                             </div>
 
-                            {/* Small/Mid Cap Section */}
-                            <div>
-                                <h3 className="text-sm font-bold text-purple-400 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
-                                    中小型株 (Small/Mid Cap)
-                                </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    {data[selectedSector].tickers.slice(5, 10).map((stock, i) => {
-                                        const isObject = typeof stock === 'object' && stock !== null;
-                                        const ticker = isObject ? stock.ticker : stock;
-                                        const change = isObject ? stock.change : null;
-                                        const price = isObject ? stock.price : null;
+                            {/* Modal Content */}
+                            <div className="p-6 md:p-8 space-y-8">
+                                {/* Large Cap Section */}
+                                <div className="relative">
+                                    <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-500/0 rounded-full" />
+                                    <h3 className="text-sm font-bold text-blue-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse shadow-lg shadow-blue-400/50" />
+                                        大型株 (Large Cap)
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        {data[selectedSector].tickers.slice(0, 5).map((stock, i) => {
+                                            const isObject = typeof stock === 'object' && stock !== null;
+                                            const ticker = isObject ? stock.ticker : stock;
+                                            const change = isObject ? stock.change : null;
+                                            const price = isObject ? stock.price : null;
 
-                                        return (
-                                            <a
-                                                key={ticker}
-                                                href={`https://finance.yahoo.co.jp/quote/${ticker}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="stock-item flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all hover:scale-[1.01] group border border-white/5"
-                                                style={{ animationDelay: `${(i + 5) * 50}ms` }}
-                                            >
-                                                <div>
-                                                    <div className="font-bold text-lg text-gray-200 group-hover:text-purple-300 transition-colors flex items-center gap-2">
-                                                        {STOCK_NAMES[ticker] || ticker}
-                                                        <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                            return (
+                                                <a
+                                                    key={ticker}
+                                                    href={`https://finance.yahoo.co.jp/quote/${ticker}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="stock-item relative flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-blue-500/10 transition-all duration-300 hover:scale-[1.02] group border border-white/5 hover:border-blue-500/30 overflow-hidden"
+                                                    style={{ animationDelay: `${i * 80}ms` }}
+                                                >
+                                                    {/* Hover glow effect */}
+                                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                                    <div className="relative z-10">
+                                                        <div className="font-bold text-lg text-gray-200 group-hover:text-blue-300 transition-colors flex items-center gap-2">
+                                                            {STOCK_NAMES[ticker] || ticker}
+                                                            <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                        </div>
+                                                        <div className="text-xs text-gray-500 font-mono">{ticker}</div>
                                                     </div>
-                                                    <div className="text-xs text-gray-500 font-mono">{ticker}</div>
-                                                </div>
-                                                <div className="text-right">
-                                                    {price !== null ? (
-                                                        <>
-                                                            <div className={`font-bold text-lg ${change > 0 ? 'text-red-400' : change < 0 ? 'text-green-400' : 'text-gray-400'}`}>
-                                                                {change > 0 ? '+' : ''}{change}%
-                                                            </div>
-                                                            <div className="text-xs text-gray-500">¥{price.toLocaleString()}</div>
-                                                        </>
-                                                    ) : (
-                                                        <div className="text-gray-600 text-xs">---</div>
-                                                    )}
-                                                </div>
-                                            </a>
-                                        );
-                                    })}
+                                                    <div className="text-right relative z-10">
+                                                        {price !== null ? (
+                                                            <>
+                                                                <div className={`font-bold text-lg ${change > 0 ? 'text-red-400 glow-red' : change < 0 ? 'text-green-400 glow-green' : 'text-gray-400'}`}>
+                                                                    {change > 0 ? '+' : ''}{change}%
+                                                                </div>
+                                                                <div className="text-xs text-gray-500">¥{price.toLocaleString()}</div>
+                                                            </>
+                                                        ) : (
+                                                            <div className="text-gray-600 text-xs">---</div>
+                                                        )}
+                                                    </div>
+                                                </a>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+
+                                {/* Divider with glow */}
+                                <div className="relative h-px">
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+                                </div>
+
+                                {/* Small/Mid Cap Section */}
+                                <div className="relative">
+                                    <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-purple-500/0 rounded-full" />
+                                    <h3 className="text-sm font-bold text-purple-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse shadow-lg shadow-purple-400/50" />
+                                        中小型株 (Small/Mid Cap)
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        {data[selectedSector].tickers.slice(5, 10).map((stock, i) => {
+                                            const isObject = typeof stock === 'object' && stock !== null;
+                                            const ticker = isObject ? stock.ticker : stock;
+                                            const change = isObject ? stock.change : null;
+                                            const price = isObject ? stock.price : null;
+
+                                            return (
+                                                <a
+                                                    key={ticker}
+                                                    href={`https://finance.yahoo.co.jp/quote/${ticker}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="stock-item relative flex justify-between items-center p-4 bg-white/5 rounded-2xl hover:bg-purple-500/10 transition-all duration-300 hover:scale-[1.02] group border border-white/5 hover:border-purple-500/30 overflow-hidden"
+                                                    style={{ animationDelay: `${(i + 5) * 80}ms` }}
+                                                >
+                                                    {/* Hover glow effect */}
+                                                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                                    <div className="relative z-10">
+                                                        <div className="font-bold text-lg text-gray-200 group-hover:text-purple-300 transition-colors flex items-center gap-2">
+                                                            {STOCK_NAMES[ticker] || ticker}
+                                                            <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                                        </div>
+                                                        <div className="text-xs text-gray-500 font-mono">{ticker}</div>
+                                                    </div>
+                                                    <div className="text-right relative z-10">
+                                                        {price !== null ? (
+                                                            <>
+                                                                <div className={`font-bold text-lg ${change > 0 ? 'text-red-400 glow-red' : change < 0 ? 'text-green-400 glow-green' : 'text-gray-400'}`}>
+                                                                    {change > 0 ? '+' : ''}{change}%
+                                                                </div>
+                                                                <div className="text-xs text-gray-500">¥{price.toLocaleString()}</div>
+                                                            </>
+                                                        ) : (
+                                                            <div className="text-gray-600 text-xs">---</div>
+                                                        )}
+                                                    </div>
+                                                </a>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
