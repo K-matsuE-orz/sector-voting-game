@@ -32,14 +32,14 @@ const INITIAL_DATA = {
     "Space": { name: "宇宙", change: 0, tickers: [] }
 };
 
-// Large Cap Companies for Logo Slider
+// Large Cap Companies for Logo Slider (Japanese)
 const LARGE_CAP_COMPANIES = [
-    "SoftBank", "KEYENCE", "FANUC", "SMC", "OMRON",
-    "FUJITSU", "NEC", "NTT", "HITACHI", "三菱電機",
-    "東京エレクトロン", "アドバンテスト", "信越化学", "DISCO", "レーザーテック",
-    "中外製薬", "第一三共", "武田薬品", "大塚HD", "アステラス",
+    "ソフトバンク", "キーエンス", "ファナック", "SMC", "オムロン",
+    "富士通", "NEC", "NTT", "日立製作所", "三菱電機",
+    "東京エレクトロン", "アドバンテスト", "信越化学", "ディスコ", "レーザーテック",
+    "中外製薬", "第一三共", "武田薬品", "大塚HD", "アステラス製薬",
     "IHI", "住友電工", "フジクラ", "古河電工", "日揮HD",
-    "三菱重工", "川崎重工", "スカパー", "Canon", "KDDI"
+    "三菱重工", "川崎重工", "スカパーJSAT", "キヤノン", "KDDI"
 ];
 
 // Logo Slider Component
@@ -138,11 +138,6 @@ function App() {
                     />
                 ))}
             </div>
-
-            {/* Gradient Orbs */}
-            <div className="orb orb-1" />
-            <div className="orb orb-2" />
-            <div className="orb orb-3" />
 
             {/* Grid Overlay */}
             <div className="grid-overlay" />
