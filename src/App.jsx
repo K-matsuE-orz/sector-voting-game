@@ -32,27 +32,66 @@ const INITIAL_DATA = {
     "Space": { name: "宇宙", change: 0, tickers: [] }
 };
 
-// Logo Slider Component with SVG Images
-const LOGO_FILES = [
-    "softbank.svg", "keyence.svg", "toyota.svg", "sony.svg", "hitachi.svg",
-    "mitsubishi.svg", "ntt.svg", "fastretailing.svg", "nintendo.svg", "honda.svg"
+// 6分野 大型株 30社 (各分野の上位5社)
+const LARGE_CAP_STOCKS = [
+    // AI・ロボット
+    { name: "ソフトバンクG", sector: "AI" },
+    { name: "キーエンス", sector: "AI" },
+    { name: "ファナック", sector: "AI" },
+    { name: "SMC", sector: "AI" },
+    { name: "オムロン", sector: "AI" },
+    // 量子技術
+    { name: "富士通", sector: "Quantum" },
+    { name: "NEC", sector: "Quantum" },
+    { name: "NTT", sector: "Quantum" },
+    { name: "日立製作所", sector: "Quantum" },
+    { name: "三菱電機", sector: "Quantum" },
+    // 半導体・通信
+    { name: "東京エレクトロン", sector: "Semi" },
+    { name: "アドバンテスト", sector: "Semi" },
+    { name: "信越化学", sector: "Semi" },
+    { name: "ディスコ", sector: "Semi" },
+    { name: "レーザーテック", sector: "Semi" },
+    // バイオ・ヘルスケア
+    { name: "中外製薬", sector: "Bio" },
+    { name: "第一三共", sector: "Bio" },
+    { name: "武田薬品", sector: "Bio" },
+    { name: "大塚HD", sector: "Bio" },
+    { name: "アステラス製薬", sector: "Bio" },
+    // 核融合
+    { name: "IHI", sector: "Fusion" },
+    { name: "住友電工", sector: "Fusion" },
+    { name: "フジクラ", sector: "Fusion" },
+    { name: "古河電工", sector: "Fusion" },
+    { name: "日揮HD", sector: "Fusion" },
+    // 宇宙
+    { name: "三菱重工", sector: "Space" },
+    { name: "川崎重工", sector: "Space" },
+    { name: "スカパーJSAT", sector: "Space" },
+    { name: "キヤノン", sector: "Space" },
+    { name: "KDDI", sector: "Space" }
 ];
 
+// セクター別カラー
+const SECTOR_COLORS = {
+    AI: "#3b82f6",      // Blue
+    Quantum: "#8b5cf6", // Purple
+    Semi: "#10b981",    // Green
+    Bio: "#ec4899",     // Pink
+    Fusion: "#f59e0b",  // Orange
+    Space: "#9ca3af"    // Gray
+};
+
 function LogoSlider() {
-    // Duplicate array multiple times for seamless infinity loop coverage
-    // Diagonal scroll covers a lot of distance, so we need many items
-    const logos = [...LOGO_FILES, ...LOGO_FILES, ...LOGO_FILES, ...LOGO_FILES];
+    // Duplicate array for seamless loop
+    const stocks = [...LARGE_CAP_STOCKS, ...LARGE_CAP_STOCKS, ...LARGE_CAP_STOCKS];
 
     return (
         <div className="logo-slider-container">
             <div className="logo-slider">
-                {logos.map((logo, i) => (
-                    <div key={i} className="logo-item">
-                        <img
-                            src={`logos/${logo}`}
-                            alt="Company Logo"
-                            className="w-auto h-24 opacity-80"
-                        />
+                {stocks.map((stock, i) => (
+                    <div key={i} className="logo-item" style={{ color: SECTOR_COLORS[stock.sector] }}>
+                        {stock.name}
                     </div>
                 ))}
             </div>
@@ -124,21 +163,6 @@ function App() {
     return (
         <div className="min-h-screen text-white p-4 md:p-8 font-sans selection:bg-blue-500 selection:text-white relative overflow-hidden">
             {/* ===== ANIMATED BACKGROUND EFFECTS ===== */}
-            {/* Floating Particles */}
-            <div className="particles-container">
-                {[...Array(30)].map((_, i) => (
-                    <div
-                        key={i}
-                        className="particle"
-                        style={{
-                            left: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 15}s`,
-                            animationDuration: `${15 + Math.random() * 10}s`
-                        }}
-                    />
-                ))}
-            </div>
-
             {/* Grid Overlay */}
             <div className="grid-overlay" />
 
