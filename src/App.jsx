@@ -72,52 +72,19 @@ const LARGE_CAP_LOGOS = [
     { name: "KDDI", domain: "kddi.com", color: "#9ca3af" }
 ];
 
-// ロゴアイテムコンポーネント - 複数のソースを試す
+// ロゴアイテムコンポーネント - 安定性のためテキストロゴに統一
 function LogoItem({ company }) {
-    const [logoSrc, setLogoSrc] = React.useState(null);
-    const [fallbackIndex, setFallbackIndex] = React.useState(0);
-
-    // ロゴ取得ソースの優先順位
-    // Clearbit -> DuckDuckGo -> テキスト
-    const logoSources = [
-        `https://logo.clearbit.com/${company.domain}`,
-        `https://icons.duckduckgo.com/ip3/${company.domain}.ico`
-    ];
-
-    React.useEffect(() => {
-        setLogoSrc(logoSources[0]);
-        setFallbackIndex(0);
-    }, [company.domain]);
-
-    const handleError = () => {
-        if (fallbackIndex < logoSources.length - 1) {
-            setFallbackIndex(prev => prev + 1);
-            setLogoSrc(logoSources[fallbackIndex + 1]);
-        } else {
-            setLogoSrc(null); // 全て失敗 → テキスト表示
-        }
-    };
-
     return (
         <div className="logo-item-vertical">
-            {logoSrc ? (
-                <img
-                    src={logoSrc}
-                    alt={company.name}
-                    className="company-logo-img"
-                    onError={handleError}
-                />
-            ) : (
-                <span
-                    className="company-logo-text"
-                    style={{
-                        color: company.color,
-                        textShadow: `0 0 15px ${company.color}`
-                    }}
-                >
-                    {company.name}
-                </span>
-            )}
+            <span
+                className="company-logo-text"
+                style={{
+                    color: company.color,
+                    textShadow: `0 0 15px ${company.color}`
+                }}
+            >
+                {company.name}
+            </span>
         </div>
     );
 }
