@@ -78,9 +78,10 @@ function LogoItem({ company }) {
     const [fallbackIndex, setFallbackIndex] = React.useState(0);
 
     // ロゴ取得ソースの優先順位
-    // Google Faviconは失敗時にデフォルトアイコン(地球)を返しonErrorが発火しないため削除
+    // Clearbit -> DuckDuckGo -> テキスト
     const logoSources = [
         `https://logo.clearbit.com/${company.domain}`,
+        `https://icons.duckduckgo.com/ip3/${company.domain}.ico`
     ];
 
     React.useEffect(() => {
