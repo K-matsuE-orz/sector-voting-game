@@ -37,11 +37,11 @@ const LARGE_CAP_LOGOS = [
     // AI・ロボット - Blue (#3b82f6)
     { name: "ソフトバンクG", slug: "softbank", wvl: "softbank", color: "#3b82f6" },
     { name: "キーエンス", slug: "keyence", customUrl: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Keyence_logo.svg", color: "#3b82f6" },
-    { name: "ファナック", slug: "fanuc", wvl: "fanuc", color: "#3b82f6" },
-    { name: "SMC", slug: "smc", wvl: "smc-1", color: "#3b82f6" },
-    { name: "オムロン", slug: "omron", wvl: "omron", color: "#3b82f6" },
+    { name: "ファナック", slug: "fanuc", customUrl: "https://upload.wikimedia.org/wikipedia/commons/4/46/Fanuc_logo.svg", color: "#3b82f6" },
+    { name: "SMC", slug: "smc", customUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d3/SMC_Corporation_logo.svg", color: "#3b82f6" },
+    { name: "オムロン", slug: "omron", customUrl: "https://upload.wikimedia.org/wikipedia/commons/1/18/Omron_logo.svg", color: "#3b82f6" },
     // 量子技術 - Purple (#8b5cf6)
-    { name: "富士通", slug: "fujitsu", wvl: "fujitsu", color: "#8b5cf6" },
+    { name: "富士通", slug: "fujitsu", customUrl: "https://upload.wikimedia.org/wikipedia/commons/9/90/Fujitsu-Logo.svg", color: "#8b5cf6" },
     { name: "NEC", slug: "nec", wvl: "nec", color: "#8b5cf6" },
     { name: "NTT", slug: "nippontelegraphandtelephone", wvl: "nippon-telegraph-and-telephone", color: "#8b5cf6" },
     { name: "日立製作所", slug: "hitachi", wvl: "hitachi", color: "#8b5cf6" },
@@ -50,7 +50,7 @@ const LARGE_CAP_LOGOS = [
     { name: "東京エレクトロン", slug: "tokyoelectron", wvl: "tokyo-electron", color: "#10b981" },
     { name: "アドバンテスト", slug: "advantest", wvl: "advantest", color: "#10b981" },
     { name: "信越化学", slug: "shinetsachemical", wvl: "shin-etsu", color: "#10b981" },
-    { name: "ディスコ", slug: "disco", customUrl: "https://www.disco.co.jp/jp/news/kit_mirror/images/logo_rgb.jpg", color: "#10b981" }, // SVGなしのため公式jpg利用(例外)
+    { name: "ディスコ", slug: "disco", customUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Disco_Corporation_logo.svg", color: "#10b981" },
     { name: "レーザーテック", slug: "lasertec", customUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Lasertec_Logo.svg", color: "#10b981" },
     // バイオ・ヘルスケア - Pink (#ec4899)
     { name: "中外製薬", slug: "chugaipharmaceutical", wvl: "chugai-pharmaceutical", color: "#ec4899" },
@@ -59,17 +59,17 @@ const LARGE_CAP_LOGOS = [
     { name: "大塚HD", slug: "otsuka", wvl: "otsuka-pharmaceutical-company", color: "#ec4899" },
     { name: "アステラス製薬", slug: "astellas", wvl: "astellas-pharma", color: "#ec4899" },
     // 核融合 - Orange (#f59e0b)
-    { name: "IHI", slug: "ihi", wvl: "ihi-corporation", color: "#f59e0b" },
+    { name: "IHI", slug: "ihi", customUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a2/IHI_logo.svg", color: "#f59e0b" },
     { name: "住友電気工業", slug: "sumitomo", customUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Sumitomo_Electric_Industries_logo.svg", color: "#f59e0b" },
     { name: "フジクラ", slug: "fujikura", customUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ea/Fujikura.svg", color: "#f59e0b" },
     { name: "古河電気工業", slug: "furukawa", customUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Furukawa_Electric_en_logo.svg", color: "#f59e0b" },
     { name: "日揮HD", slug: "jgc", wvl: "jgc", color: "#f59e0b" },
     // 宇宙 - Gray (#9ca3af)
-    { name: "三菱重工業", slug: "mitsubishiheavyindustries", wvl: "mitsubishi-heavy-industries", color: "#9ca3af" },
-    { name: "川崎重工業", slug: "kawasaki", wvl: "kawasaki", color: "#9ca3af" },
+    { name: "三菱重工業", slug: "mitsubishiheavyindustries", customUrl: "https://upload.wikimedia.org/wikipedia/commons/2/27/Mitsubishi_Heavy_Industries_logo.svg", color: "#9ca3af" },
+    { name: "川崎重工業", slug: "kawasaki", customUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kawasaki_Heavy_Industries_logo.svg", color: "#9ca3af" },
     { name: "スカパーJSAT", slug: "skyperfectjsat", customUrl: "https://upload.wikimedia.org/wikipedia/commons/2/23/SKY_Perfect_JSAT_Group_logo.svg", color: "#9ca3af" },
-    { name: "キヤノン", slug: "canon", wvl: "canon", customUrl: "https://cdn.worldvectorlogo.com/logos/canon.svg", color: "#9ca3af" },
-    { name: "KDDI", slug: "kddi", wvl: "kddi", color: "#9ca3af" }
+    { name: "キヤノン", slug: "canon", customUrl: "https://upload.wikimedia.org/wikipedia/commons/2/22/Canon_logo_2017.svg", color: "#9ca3af" },
+    { name: "KDDI", slug: "kddi", customUrl: "https://upload.wikimedia.org/wikipedia/commons/b/ba/KDDI_logo.svg", color: "#9ca3af" }
 ];
 
 // ロゴアイテムコンポーネント - Custom URL -> WorldVectorLogo -> Simple Icons -> テキスト
