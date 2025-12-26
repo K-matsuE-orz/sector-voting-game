@@ -1,332 +1,332 @@
 {
   "sectors": {
     "AI_Robot": {
-      "change_percent": 1.76,
+      "change_percent": -0.33,
       "tickers": [
         {
           "ticker": "9984.T",
-          "change": -0.23,
-          "price": 17485.0
+          "change": 1.8,
+          "price": 17800.0
         },
         {
           "ticker": "6861.T",
-          "change": -0.23,
-          "price": 57340.0
+          "change": -0.66,
+          "price": 56960.0
         },
         {
           "ticker": "6954.T",
-          "change": 2.03,
-          "price": 6045.0
+          "change": -1.01,
+          "price": 5984.0
         },
         {
           "ticker": "6273.T",
-          "change": 0.78,
-          "price": 54000.0
+          "change": -0.65,
+          "price": 53650.0
         },
         {
           "ticker": "6645.T",
-          "change": 1.27,
-          "price": 3983.0
+          "change": -1.0,
+          "price": 3943.0
         },
         {
           "ticker": "3993.T",
-          "change": 2.99,
-          "price": 3450.0
+          "change": 0.14,
+          "price": 3455.0
         },
         {
           "ticker": "4180.T",
-          "change": 3.8,
-          "price": 1120.0
+          "change": -0.98,
+          "price": 1109.0
         },
         {
           "ticker": "247A.T",
-          "change": -4.99,
-          "price": 1543.0
+          "change": 3.31,
+          "price": 1594.0
         },
         {
           "ticker": "4382.T",
-          "change": 3.34,
-          "price": 867.0
+          "change": -3.81,
+          "price": 834.0
         },
         {
           "ticker": "4011.T",
-          "change": 8.82,
-          "price": 2900.0
+          "change": -0.45,
+          "price": 2887.0
         }
       ]
     },
     "Quantum": {
-      "change_percent": 0.76,
+      "change_percent": -0.51,
       "tickers": [
         {
           "ticker": "6702.T",
-          "change": -0.59,
-          "price": 4228.0
+          "change": 0.83,
+          "price": 4263.0
         },
         {
           "ticker": "6701.T",
-          "change": 0.41,
-          "price": 5422.0
+          "change": -0.79,
+          "price": 5379.0
         },
         {
           "ticker": "9432.T",
-          "change": 0.26,
-          "price": 156.7
+          "change": 1.34,
+          "price": 158.8
         },
         {
           "ticker": "6501.T",
-          "change": -0.56,
-          "price": 4960.0
+          "change": 0.24,
+          "price": 4972.0
         },
         {
           "ticker": "6503.T",
-          "change": -0.07,
-          "price": 4605.0
+          "change": 0.69,
+          "price": 4637.0
         },
         {
           "ticker": "3687.T",
-          "change": 1.46,
-          "price": 1597.0
+          "change": -1.57,
+          "price": 1572.0
         },
         {
           "ticker": "6597.T",
-          "change": 1.29,
-          "price": 1734.0
+          "change": -1.33,
+          "price": 1711.0
         },
         {
           "ticker": "6521.T",
-          "change": 5.31,
-          "price": 1528.0
+          "change": -2.88,
+          "price": 1484.0
         },
         {
           "ticker": "7713.T",
-          "change": 0.53,
-          "price": 1525.0
+          "change": -0.33,
+          "price": 1520.0
         },
         {
           "ticker": "2693.T",
-          "change": -0.43,
-          "price": 233.0
+          "change": -1.29,
+          "price": 230.0
         }
       ]
     },
     "Semi": {
-      "change_percent": 1.82,
+      "change_percent": 1.02,
       "tickers": [
         {
           "ticker": "8035.T",
-          "change": 1.72,
-          "price": 33790.0
+          "change": 1.6,
+          "price": 34330.0
         },
         {
           "ticker": "6857.T",
-          "change": -1.81,
-          "price": 19795.0
+          "change": 2.27,
+          "price": 20245.0
         },
         {
           "ticker": "4063.T",
-          "change": 0.73,
-          "price": 4942.0
+          "change": -0.97,
+          "price": 4894.0
         },
         {
           "ticker": "6146.T",
-          "change": 0.91,
-          "price": 47720.0
+          "change": 2.41,
+          "price": 48870.0
         },
         {
           "ticker": "6920.T",
-          "change": -1.26,
-          "price": 29360.0
+          "change": 2.18,
+          "price": 30000.0
         },
         {
           "ticker": "6323.T",
-          "change": 5.2,
-          "price": 2338.5
+          "change": -0.28,
+          "price": 2332.0
         },
         {
           "ticker": "6315.T",
-          "change": 5.54,
-          "price": 2191.0
+          "change": 1.14,
+          "price": 2216.0
         },
         {
           "ticker": "4369.T",
-          "change": 2.46,
-          "price": 2792.0
+          "change": -1.04,
+          "price": 2763.0
         },
         {
           "ticker": "6871.T",
-          "change": 3.19,
-          "price": 7110.0
+          "change": 3.38,
+          "price": 7350.0
         },
         {
           "ticker": "6266.T",
-          "change": 1.57,
-          "price": 2138.0
+          "change": -0.51,
+          "price": 2127.0
         }
       ]
     },
     "Bio": {
-      "change_percent": 1.3,
+      "change_percent": -0.06,
       "tickers": [
         {
           "ticker": "4519.T",
-          "change": 0.76,
-          "price": 8329.0
+          "change": 0.97,
+          "price": 8410.0
         },
         {
           "ticker": "4568.T",
-          "change": 2.13,
-          "price": 3411.0
+          "change": 0.64,
+          "price": 3433.0
         },
         {
           "ticker": "4502.T",
-          "change": 0.0,
-          "price": 4860.0
+          "change": 0.21,
+          "price": 4870.0
         },
         {
           "ticker": "4578.T",
-          "change": 0.1,
-          "price": 9111.0
+          "change": 0.97,
+          "price": 9199.0
         },
         {
           "ticker": "4503.T",
-          "change": 0.05,
-          "price": 2094.0
+          "change": 0.24,
+          "price": 2099.0
         },
         {
           "ticker": "4587.T",
-          "change": 2.02,
-          "price": 1644.0
+          "change": 0.94,
+          "price": 1659.5
         },
         {
           "ticker": "2160.T",
-          "change": 4.19,
-          "price": 2510.0
+          "change": -0.68,
+          "price": 2493.0
         },
         {
           "ticker": "4552.T",
-          "change": 0.41,
-          "price": 728.0
+          "change": -1.24,
+          "price": 719.0
         },
         {
           "ticker": "4592.T",
-          "change": 2.19,
-          "price": 1632.0
+          "change": -1.1,
+          "price": 1614.0
         },
         {
           "ticker": "4599.T",
-          "change": 1.17,
-          "price": 259.0
+          "change": -1.54,
+          "price": 255.0
         }
       ]
     },
     "Fusion": {
-      "change_percent": 0.16,
+      "change_percent": -1.52,
       "tickers": [
         {
           "ticker": "7013.T",
-          "change": -0.64,
-          "price": 2790.0
+          "change": 0.36,
+          "price": 2800.0
         },
         {
           "ticker": "5802.T",
-          "change": 0.58,
-          "price": 6540.0
+          "change": -4.36,
+          "price": 6255.0
         },
         {
           "ticker": "5803.T",
-          "change": -2.49,
-          "price": 17620.0
+          "change": -2.61,
+          "price": 17160.0
         },
         {
           "ticker": "5801.T",
-          "change": -0.2,
-          "price": 10140.0
+          "change": -2.52,
+          "price": 9884.0
         },
         {
           "ticker": "1963.T",
-          "change": 0.52,
-          "price": 1928.5
+          "change": -0.75,
+          "price": 1914.0
         },
         {
           "ticker": "5310.T",
-          "change": 2.71,
-          "price": 4930.0
+          "change": 0.2,
+          "price": 4940.0
         },
         {
           "ticker": "7711.T",
-          "change": -1.8,
-          "price": 5990.0
+          "change": -2.0,
+          "price": 5870.0
         },
         {
           "ticker": "3446.T",
-          "change": 2.52,
-          "price": 1219.0
+          "change": -2.63,
+          "price": 1187.0
         },
         {
           "ticker": "6378.T",
-          "change": -0.25,
-          "price": 1221.0
+          "change": -0.9,
+          "price": 1210.0
         },
         {
           "ticker": "6864.T",
-          "change": 0.63,
+          "change": 0.0,
           "price": 1112.0
         }
       ]
     },
     "Space": {
-      "change_percent": -2.1,
+      "change_percent": -0.77,
       "tickers": [
         {
           "ticker": "7011.T",
-          "change": -0.51,
-          "price": 3872.0
+          "change": -0.54,
+          "price": 3851.0
         },
         {
           "ticker": "7012.T",
-          "change": -2.28,
-          "price": 10735.0
+          "change": -1.21,
+          "price": 10605.0
         },
         {
           "ticker": "9412.T",
-          "change": -3.4,
-          "price": 2047.0
+          "change": -1.51,
+          "price": 2016.0
         },
         {
           "ticker": "7751.T",
-          "change": 0.04,
-          "price": 4750.0
+          "change": 0.42,
+          "price": 4770.0
         },
         {
           "ticker": "9433.T",
-          "change": 0.41,
-          "price": 2726.0
+          "change": 0.9,
+          "price": 2750.5
         },
         {
           "ticker": "9348.T",
-          "change": 2.35,
-          "price": 436.0
+          "change": -0.23,
+          "price": 435.0
         },
         {
           "ticker": "464A.T",
-          "change": -4.95,
-          "price": 1612.0
+          "change": 0.19,
+          "price": 1615.0
         },
         {
           "ticker": "186A.T",
-          "change": -2.66,
-          "price": 659.0
+          "change": 0.46,
+          "price": 662.0
         },
         {
           "ticker": "290A.T",
-          "change": -14.26,
-          "price": 1154.0
+          "change": -0.35,
+          "price": 1150.0
         },
         {
           "ticker": "402A.T",
-          "change": 4.27,
-          "price": 537.0
+          "change": -5.77,
+          "price": 506.0
         }
       ]
     }
@@ -2981,8 +2981,18 @@
       "Bio": 6.29,
       "Fusion": 90.3,
       "Space": 34.81
+    },
+    {
+      "date": "2025-12-26",
+      "Nikkei225": 32.02,
+      "AI_Robot": 23.87,
+      "Quantum": 38.03,
+      "Semi": 43.23,
+      "Bio": 6.21,
+      "Fusion": 87.04,
+      "Space": 33.78
     }
   ],
-  "last_updated": "2025-12-25T07:21:49.918257+00:00",
-  "nikkei_current_price": 50407.79
+  "last_updated": "2025-12-26T07:22:14.653053+00:00",
+  "nikkei_current_price": 50750.39
 }
